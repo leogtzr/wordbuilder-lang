@@ -1,5 +1,10 @@
 package wordbuilder
 
+import (
+	"strings"
+	"unicode"
+)
+
 type Lexer struct {
 	input        string
 	position     int  // current position in input (points to current char)
@@ -91,7 +96,7 @@ func (lex *Lexer) NextToken() Token {
 		tok.Type = EOF
 	default:
 		if isLetter(lex.ch) {
-			tok.Literal = lex.readIdentifier()
+			tok.Literal = strings.TrimSpace(lex.readIdentifier())
 			tok.Type = LookupIdent(tok.Literal)
 			return tok
 		} else if isDigit(lex.ch) {
@@ -117,7 +122,7 @@ func (lex *Lexer) peekChar() byte {
 
 func (lex *Lexer) readIdentifier() string {
 	pos := lex.position
-	for isLetter(lex.ch) {
+	for isLetter(lex.ch) || unicode.IsSpace(rune(lex.ch)) {
 		lex.readChar()
 	}
 

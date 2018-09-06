@@ -1,7 +1,6 @@
 package wordbuilder
 
 import (
-	//"fmt"
 	"testing"
 )
 
@@ -126,7 +125,9 @@ func TestNextToken(t *testing.T) {
 		holis
 		}
 
-	ref: alv -> (p)`
+	ref: Sucesos de Scottsboro -> (p)
+	w:lunfardo->(p)
+	`
 	tests := []struct {
 		expectedType    TokenType
 		expectedLiteral string
@@ -136,7 +137,24 @@ func TestNextToken(t *testing.T) {
 		{IDENT, "estridente"},
 		{BEGIN_W_REF_OR_C, "->"},
 		{TEXT, "{\n\t\tholis\n\t\t}"},
+
 		{REF, "ref"},
+		{COLON, ":"},
+		{IDENT, "Sucesos de Scottsboro"},
+		{BEGIN_W_REF_OR_C, "->"},
+		{LPAREN, "("},
+		{IDENT, "p"},
+		{RPAREN, ")"},
+
+		{WORD, "w"},
+		{COLON, ":"},
+		{IDENT, "lunfardo"},
+		{BEGIN_W_REF_OR_C, "->"},
+		{LPAREN, "("},
+		{IDENT, "p"},
+		{RPAREN, ")"},
+
+		{EOF, ""},
 	}
 
 	l := New(input)
@@ -149,7 +167,7 @@ func TestNextToken(t *testing.T) {
 		}
 
 		if tok.Literal != tt.expectedLiteral {
-			t.Fatalf("tests[%v] - literal wrong. expected=%q, got=%q", t, tt.expectedLiteral, tok.Literal)
+			t.Fatalf("literal wrong. expected=%q, got=%q", tt.expectedLiteral, tok.Literal)
 		}
 	}
 }
@@ -162,7 +180,6 @@ func TestCountWords(t *testing.T) {
 	expectedTokenCount := 5
 
 	for tok := lexer.NextToken(); tok.Type != EOF; tokenCount++ {
-		//fmt.Println(tok)
 		tok = lexer.NextToken()
 	}
 

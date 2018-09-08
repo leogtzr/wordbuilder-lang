@@ -177,7 +177,7 @@ func TestCountWords(t *testing.T) {
 	input := `w: -> estridente (p)`
 	lexer := New(input)
 	tokenCount := 0
-	expectedTokenCount := 5
+	expectedTokenCount := 7
 
 	for tok := lexer.NextToken(); tok.Type != EOF; tokenCount++ {
 		tok = lexer.NextToken()

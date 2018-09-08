@@ -5,6 +5,7 @@ import (
 	"unicode"
 )
 
+// Lexer ...
 type Lexer struct {
 	input        string
 	position     int  // current position in input (points to current char)
@@ -12,6 +13,7 @@ type Lexer struct {
 	ch           byte // current char under examination
 }
 
+// New ...
 func New(input string) *Lexer {
 	lex := &Lexer{input: input}
 	lex.readChar()
@@ -29,6 +31,7 @@ func (lex *Lexer) readChar() {
 	lex.readPosition++
 }
 
+// NextToken ...
 func (lex *Lexer) NextToken() Token {
 	var tok Token
 
@@ -122,7 +125,7 @@ func (lex *Lexer) peekChar() byte {
 
 func (lex *Lexer) readIdentifier() string {
 	pos := lex.position
-	for isLetter(lex.ch) || unicode.IsSpace(rune(lex.ch)) {
+	for isLetter(lex.ch) || unicode.IsSpace(rune(lex.ch)) || unicode.IsNumber(rune(lex.ch)) {
 		lex.readChar()
 	}
 

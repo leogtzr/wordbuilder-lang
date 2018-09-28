@@ -147,6 +147,26 @@ func testWordStatement(t *testing.T, s ast.Statement, defined bool, definition, 
 	return true
 }
 
+func testMeThoughtStatement(t *testing.T, s ast.Statement, expectedContent string) bool {
+	if s.TokenLiteral() != "me" {
+		t.Errorf("s.TokenLiteral not 'me'. got=%q", s.TokenLiteral())
+		return false
+	}
+
+	meStmt, ok := s.(*ast.MeThoughtStatement)
+	if !ok {
+		t.Errorf("s not *ast.MeThoughtStatement. got=%T", s)
+		return false
+	}
+
+	if meStmt.Content != expectedContent {
+		t.Errorf("wordStmt.Defined.Value not '%s'. got=%s", expectedContent, meStmt.Content)
+		return false
+	}
+
+	return true
+}
+
 func testTranslationStatement(t *testing.T, s ast.Statement, defined bool, definition, name string) bool {
 	if s.TokenLiteral() != "tr" {
 		t.Errorf("s.TokenLiteral not 'tr'. got=%q", s.TokenLiteral())
@@ -292,7 +312,6 @@ func TestWordStatement(t *testing.T) {
 }
 
 func TestTranslationStatement(t *testing.T) {
-
 	tests := []struct {
 		input              string
 		expectedIdentifier string
@@ -316,6 +335,32 @@ func TestTranslationStatement(t *testing.T) {
 
 		stmt := program.Statements[0]
 		if !testTranslationStatement(t, stmt, tt.defined, tt.expectedDefinition, tt.expectedIdentifier) {
+			return
+		}
+
+	}
+}
+
+func TestMeThoughtStatement(t *testing.T) {
+	tests := []struct {
+		input           string
+		expectedContent string
+	}{
+		{`me: {"ronquido"}`, "ronquido"},
+	}
+
+	for _, tt := range tests {
+		l := lexer.New(tt.input)
+		p := New(l)
+		program := p.ParseProgram()
+		checkParserErrors(t, p)
+
+		if len(program.Statements) != 1 {
+			t.Fatalf("program.Statements does not contain 1 statements. got=%d", len(program.Statements))
+		}
+
+		stmt := program.Statements[0]
+		if !testMeThoughtStatement(t, stmt, tt.expectedContent) {
 			return
 		}
 

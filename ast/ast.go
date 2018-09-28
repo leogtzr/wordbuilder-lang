@@ -118,6 +118,21 @@ func (ts *TranslationStatement) String() string {
 	return out.String()
 }
 
+// MeThoughtStatement ...
+type MeThoughtStatement struct {
+	Content string
+}
+
+func (ms *MeThoughtStatement) statementNode()       {}
+func (ms *MeThoughtStatement) TokenLiteral() string { return "me" }
+func (ms *MeThoughtStatement) String() string {
+	var out bytes.Buffer
+	out.WriteString("{")
+	out.WriteString(ms.Content)
+	out.WriteString("}")
+	return out.String()
+}
+
 type ReferenceStatement struct {
 	Token      token.Token // the token.REF token
 	Name       *Identifier

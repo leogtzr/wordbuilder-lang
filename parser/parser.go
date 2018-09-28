@@ -413,6 +413,8 @@ func (p *Parser) parseStatement() ast.Statement {
 		return p.parseConceptStatement()
 	case token.TR:
 		return p.parseTranslationStatement()
+	case token.ME:
+		return p.parseMeThoughtStatement()
 	default:
 		return p.parseExpressionStatement()
 	}
@@ -527,6 +529,41 @@ func (p *Parser) parseTranslationStatement() *ast.TranslationStatement {
 			return nil
 		}
 		stmt.Defined = true
+	}
+
+	p.nextToken()
+
+	if p.peekTokenIs(token.SEMICOLON) {
+		p.nextToken()
+	}
+
+	return stmt
+
+}
+
+func (p *Parser) parseMeThoughtStatement() *ast.MeThoughtStatement {
+	stmt := &ast.MeThoughtStatement{}
+
+	if !p.expectPeek(token.COLON) {
+		return nil
+	}
+
+	// Expecting an identifier after the :
+	if !p.peekTokenIs(token.LBRACE) {
+		return nil
+	}
+
+	p.nextToken()
+
+	if p.peekTokenIs(token.STRING) {
+
+		p.nextToken()
+
+		stmt.Content = p.parseExpression(LOWEST).String()
+
+		if !p.expectPeek(token.RBRACE) {
+			return nil
+		}
 	}
 
 	p.nextToken()

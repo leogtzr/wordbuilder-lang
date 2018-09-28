@@ -1,6 +1,7 @@
 package evaluator
 
 import (
+	"fmt"
 	"testing"
 	"wordbuilder/lexer"
 	"wordbuilder/object"
@@ -361,13 +362,13 @@ func TestBuiltinFunctions(t *testing.T) {
 		{`len("hello world")`, 11},
 		{`max(3, 5, 2)`, 5},
 		{`max(2)`, 2},
+		{`defined("alv")`, false},
 		{`len(1)`, "argument to `len` not supported, got INTEGER"},
 		{`len("one", "two")`, "wrong number of arguments. got=2, want=1"},
 	}
 
 	for _, tt := range tests {
 		evaluated := testEval(tt.input)
-
 		switch expected := tt.expected.(type) {
 		case int:
 			testIntegerObject(t, evaluated, int64(expected))
@@ -380,6 +381,11 @@ func TestBuiltinFunctions(t *testing.T) {
 			if errObj.Message != expected {
 				t.Errorf("wrong error message. expected=%q, got=%q", expected, errObj.Message)
 			}
+		case bool:
+			ok, _ := tt.expected.(bool)
+			fmt.Println(ok)
+			testBooleanObject(t, evaluated, ok)
+			// TODO: boolean ...
 		}
 	}
 }
@@ -498,6 +504,54 @@ func TestHashLiterals(t *testing.T) {
 		}
 
 		testIntegerObject(t, pair.Value, expectedValue)
+	}
+}
+
+func TestWordAddition(t *testing.T) {
+	input := `word: bulo {"burla"};
+	bulo;
+	`
+
+	evaluated := testEval(input)
+
+	str, ok := evaluated.(*object.String)
+	if !ok {
+		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
+	}
+	if str.Value != "burla" {
+		t.Fatalf("object is not '%s', got '%s'", "burla", str.Value)
+	}
+}
+
+func TestRefAddition(t *testing.T) {
+	input := `ref: a {"b"};
+	a;
+	`
+
+	evaluated := testEval(input)
+
+	str, ok := evaluated.(*object.String)
+	if !ok {
+		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
+	}
+	if str.Value != "b" {
+		t.Fatalf("object is not '%s', got '%s'", "b", str.Value)
+	}
+}
+
+func TestConceptAddition(t *testing.T) {
+	input := `cpt: a {"b"};
+	a
+	`
+
+	evaluated := testEval(input)
+
+	str, ok := evaluated.(*object.String)
+	if !ok {
+		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
+	}
+	if str.Value != "b" {
+		t.Fatalf("object is not '%s', got '%s'", "b", str.Value)
 	}
 }
 

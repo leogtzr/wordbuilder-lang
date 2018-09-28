@@ -10,13 +10,21 @@ import (
 
 const (
 	_ int = iota
+	// LOWEST ...
 	LOWEST
-	EQUALS      // ==
+	// EQUALS ...
+	EQUALS // ==
+	// LESSGREATER ...
 	LESSGREATER // > or <
-	SUM         // +
-	PRODUCT     // *
-	PREFIX      // -X or !X
-	CALL        // myFunction(X)
+	// SUM ...
+	SUM // +
+	// PRODUCT ...
+	PRODUCT // *
+	// PREFIX ...
+	PREFIX // -X or !X
+	// CALL ...
+	CALL // myFunction(X)
+	// INDEX ...
 	INDEX
 )
 
@@ -47,6 +55,7 @@ func (p *Parser) curPrecedence() int {
 	return LOWEST
 }
 
+// Parser ...
 type Parser struct {
 	l *lexer.Lexer
 
@@ -66,6 +75,7 @@ func (p *Parser) registerInfix(tokenType token.TokenType, fn infixParseFn) {
 	p.infixParseFns[tokenType] = fn
 }
 
+// New ...
 func New(l *lexer.Lexer) *Parser {
 	p := &Parser{
 		l:      l,
@@ -340,6 +350,7 @@ func (p *Parser) parseInfixExpression(left ast.Expression) ast.Expression {
 }
 
 func (p *Parser) parseIdentifier() ast.Expression {
+	// Add check-up here ...
 	return &ast.Identifier{Token: p.curToken, Value: p.curToken.Literal}
 }
 
@@ -356,6 +367,7 @@ func (p *Parser) parsePrefixExpression() ast.Expression {
 	return expression
 }
 
+// Errors ...
 func (p *Parser) Errors() []string {
 	return p.errors
 }
@@ -371,6 +383,7 @@ func (p *Parser) nextToken() {
 	p.peekToken = p.l.NextToken()
 }
 
+// ParseProgram ...
 func (p *Parser) ParseProgram() *ast.Program {
 	program := &ast.Program{}
 	program.Statements = []ast.Statement{}
@@ -506,6 +519,7 @@ func (p *Parser) parseReferenceStatement() *ast.ReferenceStatement {
 		}
 
 		stmt.Definition = p.curToken.Literal
+		stmt.Value = p.parseExpression(LOWEST)
 
 		if !p.expectPeek(token.RBRACE) {
 			return nil
@@ -547,6 +561,7 @@ func (p *Parser) parseConceptStatement() *ast.ConceptStatement {
 		}
 
 		stmt.Definition = p.curToken.Literal
+		stmt.Value = p.parseExpression(LOWEST)
 
 		if !p.expectPeek(token.RBRACE) {
 			return nil

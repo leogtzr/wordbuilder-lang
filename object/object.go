@@ -2,10 +2,12 @@ package object
 
 import (
 	"bytes"
+	//"environment/object"
 	"fmt"
 	"hash/fnv"
 	"strings"
 	"wordbuilder/ast"
+	//	"wordbuilder/object"
 )
 
 type ObjectType string
@@ -21,6 +23,9 @@ const (
 	BUILTIN_OBJ      = "BUILTIN"
 	ARRAY_OBJ        = "ARRAY"
 	HASH_OBJ         = "HASH"
+	WORD_OBJ         = "WORD"
+	REFERENCE_OBJ    = "REF"
+	CONCEPT_OBJ      = "CPT"
 )
 
 type Object interface {
@@ -124,7 +129,7 @@ func (s *String) Inspect() string {
 	return s.Value
 }
 
-type BuiltinFunction func(args ...Object) Object
+type BuiltinFunction func(env *Environment, args ...Object) Object
 
 type Builtin struct {
 	Fn BuiltinFunction
@@ -218,4 +223,17 @@ type Hashable interface {
 
 func (h *Hash) Type() ObjectType {
 	return HASH_OBJ
+}
+
+type Word struct {
+	word       string
+	definition string
+}
+
+func (w *Word) Type() ObjectType {
+	return WORD_OBJ
+}
+
+func (w *Word) Inspect() string {
+	return fmt.Sprintf("%s->{%s}", w.word, w.definition)
 }

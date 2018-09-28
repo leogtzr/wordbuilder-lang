@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"wordbuilder/ast"
 	"wordbuilder/object"
+	// "wordbuilder/object"
+	// "wordbuilder/object"
 )
 
 var (
@@ -72,7 +74,7 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 		if len(args) == 1 && isError(args[0]) {
 			return args[0]
 		}
-		return applyFunction(function, args)
+		return applyFunction(env, function, args)
 
 	case *ast.PrefixExpression:
 		right := Eval(node.Right, env)
@@ -124,13 +126,18 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 		env.Set(node.Name.Value, val)
 
 	case *ast.WordStatement:
-		//env.Set(node.Name.Value, val)
 		val := Eval(node.Value, env)
 		if isError(val) {
 			return val
 		}
 		env.Set(node.Name.Value, val)
-		return nil
+
+	case *ast.ConceptStatement:
+		val := Eval(node.Value, env)
+		if isError(val) {
+			return val
+		}
+		env.Set(node.Name.Value, val)
 	}
 	return nil
 }
@@ -200,7 +207,7 @@ func evalArrayIndexExpression(array, index object.Object) object.Object {
 	return arrayObject.Elements[idx]
 }
 
-func applyFunction(fn object.Object, args []object.Object) object.Object {
+func applyFunction(env *object.Environment, fn object.Object, args []object.Object) object.Object {
 
 	switch fn := fn.(type) {
 	case *object.Function:
@@ -209,7 +216,7 @@ func applyFunction(fn object.Object, args []object.Object) object.Object {
 		return unwrapReturnValue(evaluated)
 
 	case *object.Builtin:
-		return fn.Fn(args...)
+		return fn.Fn(env, args...)
 
 	default:
 		return newError("not a function: %s", fn.Type())
@@ -256,7 +263,6 @@ func evalExpressions(
 
 func evalIdentifier(node *ast.Identifier, env *object.Environment) object.Object {
 	if val, ok := env.Get(node.Value); ok {
-		fmt.Println((val == nil))
 		return val
 	}
 	if builtin, ok := builtins[node.Value]; ok {

@@ -115,6 +115,22 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 
 	case *ast.IfExpression:
 		return evalIfExpression(node, env)
+
+	case *ast.ReferenceStatement:
+		val := Eval(node.Value, env)
+		if isError(val) {
+			return val
+		}
+		env.Set(node.Name.Value, val)
+
+	case *ast.WordStatement:
+		//env.Set(node.Name.Value, val)
+		val := Eval(node.Value, env)
+		if isError(val) {
+			return val
+		}
+		env.Set(node.Name.Value, val)
+		return nil
 	}
 	return nil
 }
@@ -240,13 +256,12 @@ func evalExpressions(
 
 func evalIdentifier(node *ast.Identifier, env *object.Environment) object.Object {
 	if val, ok := env.Get(node.Value); ok {
-		// return newError("identifier not found: " + node.Value)
+		fmt.Println((val == nil))
 		return val
 	}
 	if builtin, ok := builtins[node.Value]; ok {
 		return builtin
 	}
-	//return val
 	return newError("identifier not found: " + node.Value)
 }
 

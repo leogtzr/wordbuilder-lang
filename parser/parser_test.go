@@ -117,7 +117,7 @@ func testLetStatement(t *testing.T, s ast.Statement, name string) bool {
 	return true
 }
 
-func testWordStatement(t *testing.T, s ast.Statement, defined bool, name string) bool {
+func testWordStatement(t *testing.T, s ast.Statement, defined bool, definition, name string) bool {
 	if s.TokenLiteral() != "word" {
 		t.Errorf("s.TokenLiteral not 'word'. got=%q", s.TokenLiteral())
 		return false
@@ -131,6 +131,11 @@ func testWordStatement(t *testing.T, s ast.Statement, defined bool, name string)
 
 	if wordStmt.Defined != defined {
 		t.Errorf("wordStmt.Defined.Value not '%t'. got=%t", defined, wordStmt.Defined)
+		return false
+	}
+
+	if wordStmt.Definition != definition {
+		t.Errorf("wordStmt.Definition.Value not '%s'. got=%s", definition, wordStmt.Definition)
 		return false
 	}
 
@@ -151,6 +156,31 @@ func testReferenceStatement(t *testing.T, s ast.Statement, defined bool, name st
 	refStmt, ok := s.(*ast.ReferenceStatement)
 	if !ok {
 		t.Errorf("s not *ast.ReferenceStatement. got=%T", s)
+		return false
+	}
+
+	if refStmt.Defined != defined {
+		t.Errorf("refStmt.Defined.Value not '%t'. got=%t", defined, refStmt.Defined)
+		return false
+	}
+
+	if refStmt.Name.Value != name {
+		t.Errorf("refStmt.Name.Value not '%s'. got=%s", name, refStmt.Name.Value)
+		return false
+	}
+
+	return true
+}
+
+func testConceptStatement(t *testing.T, s ast.Statement, defined bool, name string) bool {
+	if s.TokenLiteral() != "cpt" {
+		t.Errorf("s.TokenLiteral not 'cpt'. got=%q", s.TokenLiteral())
+		return false
+	}
+
+	refStmt, ok := s.(*ast.ConceptStatement)
+	if !ok {
+		t.Errorf("s not *ast.ConceptStatement. got=%T", s)
 		return false
 	}
 
@@ -202,13 +232,14 @@ func TestWordStatement(t *testing.T) {
 	tests := []struct {
 		input              string
 		expectedIdentifier string
+		expectedDefinition string
 		defined            bool
 	}{
-		{"word: bulo;", "bulo", false},
-		{"word: calcitrante;", "calcitrante", false},
-		{"word: inasequible;", "inasequible", false},
-		{`word: bulo {"alv"};`, "bulo", true},
-		{`word: bulo {"alv2"}`, "bulo", true},
+		{"word: bulo;", "bulo", "", false},
+		{"word: calcitrante;", "calcitrante", "", false},
+		{"word: inasequible;", "inasequible", "", false},
+		{`word: bulo {"alv"};`, "bulo", "alv", true},
+		{`word: bulo {"alv2"}`, "bulo", "alv2", true},
 	}
 
 	for _, tt := range tests {
@@ -223,7 +254,7 @@ func TestWordStatement(t *testing.T) {
 		}
 
 		stmt := program.Statements[0]
-		if !testWordStatement(t, stmt, tt.defined, tt.expectedIdentifier) {
+		if !testWordStatement(t, stmt, tt.defined, tt.expectedDefinition, tt.expectedIdentifier) {
 			return
 		}
 
@@ -257,6 +288,38 @@ func TestReferenceStatement(t *testing.T) {
 
 		stmt := program.Statements[0]
 		if !testReferenceStatement(t, stmt, tt.defined, tt.expectedIdentifier) {
+			return
+		}
+
+	}
+}
+func TestConceptStatement(t *testing.T) {
+
+	tests := []struct {
+		input              string
+		expectedIdentifier string
+		defined            bool
+	}{
+		{"cpt: bulo;", "bulo", false},
+		{"cpt: calcitrante;", "calcitrante", false},
+		{"cpt: inasequible;", "inasequible", false},
+		{`cpt: bulo {"alv"};`, "bulo", true},
+		{`cpt: bulo {"alv2"}`, "bulo", true},
+	}
+
+	for _, tt := range tests {
+		l := lexer.New(tt.input)
+		p := New(l)
+		program := p.ParseProgram()
+		checkParserErrors(t, p)
+
+		if len(program.Statements) != 1 {
+			t.Fatalf("program.Statements does not contain 1 statements. got=%d",
+				len(program.Statements))
+		}
+
+		stmt := program.Statements[0]
+		if !testConceptStatement(t, stmt, tt.defined, tt.expectedIdentifier) {
 			return
 		}
 

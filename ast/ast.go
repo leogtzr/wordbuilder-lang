@@ -93,7 +93,7 @@ func (ws *WordStatement) String() string {
 }
 
 type ReferenceStatement struct {
-	Token      token.Token // the token.WORD token
+	Token      token.Token // the token.REF token
 	Name       *Identifier
 	Value      Expression
 	Definition string
@@ -111,6 +111,32 @@ func (rs *ReferenceStatement) String() string {
 
 	if rs.Value != nil {
 		out.WriteString(rs.Value.String())
+	}
+
+	out.WriteString(";")
+
+	return out.String()
+}
+
+type ConceptStatement struct {
+	Token      token.Token // the token.CPT token
+	Name       *Identifier
+	Value      Expression
+	Definition string
+	Defined    bool // If it is defined or not (p)
+}
+
+func (cpts *ConceptStatement) statementNode()       {}
+func (cpts *ConceptStatement) TokenLiteral() string { return cpts.Token.Literal }
+func (cpts *ConceptStatement) String() string {
+	var out bytes.Buffer
+
+	out.WriteString(cpts.TokenLiteral() + " ")
+	out.WriteString(cpts.Name.String())
+	out.WriteString(" = ")
+
+	if cpts.Value != nil {
+		out.WriteString(cpts.Value.String())
 	}
 
 	out.WriteString(";")

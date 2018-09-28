@@ -57,7 +57,7 @@ var builtins = map[string]*object.Builtin{
 
 			str := args[0].(*object.String)
 			_, ok := env.Get(str.Value)
-			return &object.Boolean{Value: ok}
+			return nativeBoolToBooleanIObject(ok)
 		},
 	},
 

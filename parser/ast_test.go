@@ -5,8 +5,8 @@ import (
 	"wordbuilder/lexer"
 	//"wordbuilder/parser"
 	//"wordbuilder/parser"
-	"wordbuilder/token"
 	"wordbuilder/ast"
+	"wordbuilder/token"
 )
 
 func TestString(t *testing.T) {

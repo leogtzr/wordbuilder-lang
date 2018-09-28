@@ -1,0 +1,7 @@
+let x = 1 + 3;
+word: lala {"lala2"};
+if (defined("lalat")) { 
+	puts("OK, found ... "); 
+} else { 
+	puts("it is NOT defined"); 
+}

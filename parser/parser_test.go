@@ -139,10 +139,30 @@ func testWordStatement(t *testing.T, s ast.Statement, defined bool, name string)
 		return false
 	}
 
-	// if wordStmt.Name.TokenLiteral() != name {
-	// 	t.Errorf("s.Name not '%s'. got=%s", name, wordStmt.Name)
-	// 	return false
-	// }
+	return true
+}
+
+func testReferenceStatement(t *testing.T, s ast.Statement, defined bool, name string) bool {
+	if s.TokenLiteral() != "ref" {
+		t.Errorf("s.TokenLiteral not 'ref'. got=%q", s.TokenLiteral())
+		return false
+	}
+
+	refStmt, ok := s.(*ast.ReferenceStatement)
+	if !ok {
+		t.Errorf("s not *ast.ReferenceStatement. got=%T", s)
+		return false
+	}
+
+	if refStmt.Defined != defined {
+		t.Errorf("refStmt.Defined.Value not '%t'. got=%t", defined, refStmt.Defined)
+		return false
+	}
+
+	if refStmt.Name.Value != name {
+		t.Errorf("refStmt.Name.Value not '%s'. got=%s", name, refStmt.Name.Value)
+		return false
+	}
 
 	return true
 }
@@ -204,6 +224,39 @@ func TestWordStatement(t *testing.T) {
 
 		stmt := program.Statements[0]
 		if !testWordStatement(t, stmt, tt.defined, tt.expectedIdentifier) {
+			return
+		}
+
+	}
+}
+
+func TestReferenceStatement(t *testing.T) {
+
+	tests := []struct {
+		input              string
+		expectedIdentifier string
+		defined            bool
+	}{
+		{"ref: bulo;", "bulo", false},
+		{"ref: calcitrante;", "calcitrante", false},
+		{"ref: inasequible;", "inasequible", false},
+		{`ref: bulo {"alv"};`, "bulo", true},
+		{`ref: bulo {"alv2"}`, "bulo", true},
+	}
+
+	for _, tt := range tests {
+		l := lexer.New(tt.input)
+		p := New(l)
+		program := p.ParseProgram()
+		checkParserErrors(t, p)
+
+		if len(program.Statements) != 1 {
+			t.Fatalf("program.Statements does not contain 1 statements. got=%d",
+				len(program.Statements))
+		}
+
+		stmt := program.Statements[0]
+		if !testReferenceStatement(t, stmt, tt.defined, tt.expectedIdentifier) {
 			return
 		}
 

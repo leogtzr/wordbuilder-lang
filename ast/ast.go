@@ -92,6 +92,32 @@ func (ws *WordStatement) String() string {
 	return out.String()
 }
 
+type ReferenceStatement struct {
+	Token      token.Token // the token.WORD token
+	Name       *Identifier
+	Value      Expression
+	Definition string
+	Defined    bool // If it is defined or not (p)
+}
+
+func (rs *ReferenceStatement) statementNode()       {}
+func (rs *ReferenceStatement) TokenLiteral() string { return rs.Token.Literal }
+func (rs *ReferenceStatement) String() string {
+	var out bytes.Buffer
+
+	out.WriteString(rs.TokenLiteral() + " ")
+	out.WriteString(rs.Name.String())
+	out.WriteString(" = ")
+
+	if rs.Value != nil {
+		out.WriteString(rs.Value.String())
+	}
+
+	out.WriteString(";")
+
+	return out.String()
+}
+
 type Identifier struct {
 	Token token.Token // the token.IDENT token
 	Value string

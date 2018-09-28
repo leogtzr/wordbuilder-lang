@@ -394,6 +394,8 @@ func (p *Parser) parseStatement() ast.Statement {
 		return p.parseReturnStatement()
 	case token.WORD:
 		return p.parseWordStatement()
+	case token.REF:
+		return p.parseReferenceStatement()
 	default:
 		return p.parseExpressionStatement()
 	}
@@ -455,20 +457,57 @@ func (p *Parser) parseWordStatement() *ast.WordStatement {
 	if p.peekTokenIs(token.LBRACE) {
 		p.nextToken()
 
-		if !p.peekTokenIs(token.STRING) {
+		if !p.expectPeek(token.STRING) {
 			return nil
 		}
-		p.nextToken()
 
 		stmt.Definition = p.curToken.Literal
 
-		if !p.peekTokenIs(token.RBRACE) {
+		if !p.expectPeek(token.RBRACE) {
+			return nil
+		}
+		stmt.Defined = true
+	}
+
+	p.nextToken()
+
+	if p.peekTokenIs(token.SEMICOLON) {
+		p.nextToken()
+	}
+
+	return stmt
+
+}
+
+func (p *Parser) parseReferenceStatement() *ast.ReferenceStatement {
+	stmt := &ast.ReferenceStatement{Token: p.curToken}
+
+	if !p.expectPeek(token.COLON) {
+		return nil
+	}
+
+	// Expecting an identifier after the :
+	if !p.peekTokenIs(token.IDENT) {
+		return nil
+	}
+
+	p.nextToken()
+
+	stmt.Name = &ast.Identifier{Token: p.curToken, Value: p.curToken.Literal}
+
+	if p.peekTokenIs(token.LBRACE) {
+		p.nextToken()
+
+		if !p.expectPeek(token.STRING) {
 			return nil
 		}
 
+		stmt.Definition = p.curToken.Literal
+
+		if !p.expectPeek(token.RBRACE) {
+			return nil
+		}
 		stmt.Defined = true
-	} else {
-		p.debug()
 	}
 
 	p.nextToken()

@@ -67,10 +67,11 @@ func (ls *LetStatement) String() string {
 }
 
 type WordStatement struct {
-	Token   token.Token // the token.WORD token
-	Name    *Identifier
-	Value   Expression
-	Defined bool // If it is defined or not (p)
+	Token      token.Token // the token.WORD token
+	Name       *Identifier
+	Value      Expression
+	Definition string
+	Defined    bool // If it is defined or not (p)
 }
 
 func (ws *WordStatement) statementNode()       {}

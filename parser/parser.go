@@ -452,15 +452,23 @@ func (p *Parser) parseWordStatement() *ast.WordStatement {
 
 	stmt.Name = &ast.Identifier{Token: p.curToken, Value: p.curToken.Literal}
 
-	if p.peekTokenIs(token.LPAREN) {
+	if p.peekTokenIs(token.LBRACE) {
 		p.nextToken()
-		if !p.peekTokenIs(token.IDENT) {
+
+		if !p.peekTokenIs(token.STRING) {
 			return nil
 		}
 		p.nextToken()
-		if !p.peekTokenIs(token.RPAREN) {
+
+		stmt.Definition = p.curToken.Literal
+
+		if !p.peekTokenIs(token.RBRACE) {
 			return nil
 		}
+
+		stmt.Defined = true
+	} else {
+		p.debug()
 	}
 
 	p.nextToken()

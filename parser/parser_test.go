@@ -184,10 +184,11 @@ func TestWordStatement(t *testing.T) {
 		expectedIdentifier string
 		defined            bool
 	}{
-		{"word: bulo (p);", "bulo", false},
-		{"word: calcitrante (p);", "calcitrante", false},
-		{"word: inasequible (p);", "inasequible", false},
-		{`word: bulo -> {"alv"};`, "inasequible", true},
+		{"word: bulo;", "bulo", false},
+		{"word: calcitrante;", "calcitrante", false},
+		{"word: inasequible;", "inasequible", false},
+		{`word: bulo {"alv"};`, "bulo", true},
+		{`word: bulo {"alv2"}`, "bulo", true},
 	}
 
 	for _, tt := range tests {

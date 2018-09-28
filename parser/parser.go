@@ -496,7 +496,6 @@ func (p *Parser) parseWordStatement() *ast.WordStatement {
 	}
 
 	return stmt
-
 }
 
 func (p *Parser) parseTranslationStatement() *ast.TranslationStatement {
@@ -538,7 +537,6 @@ func (p *Parser) parseTranslationStatement() *ast.TranslationStatement {
 	}
 
 	return stmt
-
 }
 
 func (p *Parser) parseMeThoughtStatement() *ast.MeThoughtStatement {
@@ -549,18 +547,13 @@ func (p *Parser) parseMeThoughtStatement() *ast.MeThoughtStatement {
 	}
 
 	// Expecting an identifier after the :
-	if !p.peekTokenIs(token.LBRACE) {
+	if !p.expectPeek(token.LBRACE) {
 		return nil
 	}
 
-	p.nextToken()
-
 	if p.peekTokenIs(token.STRING) {
-
 		p.nextToken()
-
 		stmt.Content = p.parseExpression(LOWEST).String()
-
 		if !p.expectPeek(token.RBRACE) {
 			return nil
 		}
@@ -573,7 +566,6 @@ func (p *Parser) parseMeThoughtStatement() *ast.MeThoughtStatement {
 	}
 
 	return stmt
-
 }
 
 func (p *Parser) parseReferenceStatement() *ast.ReferenceStatement {
@@ -615,7 +607,6 @@ func (p *Parser) parseReferenceStatement() *ast.ReferenceStatement {
 	}
 
 	return stmt
-
 }
 
 func (p *Parser) parseConceptStatement() *ast.ConceptStatement {

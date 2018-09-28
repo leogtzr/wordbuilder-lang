@@ -28,6 +28,11 @@ if (5 < 10) {
 "foo bar"
 [1, 2];
 {"foo": "bar"}
+me;
+tr;
+word;
+cpt;
+ref;
 `
 
 	tests := []struct {
@@ -120,10 +125,25 @@ if (5 < 10) {
 		{token.SEMICOLON, ";"},
 
 		{token.LBRACE, "{"},
-        {token.STRING, "foo"},
-        {token.COLON, ":"},
-        {token.STRING, "bar"},
-        {token.RBRACE, "}"},
+		{token.STRING, "foo"},
+		{token.COLON, ":"},
+		{token.STRING, "bar"},
+		{token.RBRACE, "}"},
+
+		{token.ME, "me"},
+		{token.SEMICOLON, ";"},
+
+		{token.TR, "tr"},
+		{token.SEMICOLON, ";"},
+
+		{token.WORD, "word"},
+		{token.SEMICOLON, ";"},
+
+		{token.CPT, "cpt"},
+		{token.SEMICOLON, ";"},
+
+		{token.REF, "ref"},
+		{token.SEMICOLON, ";"},
 
 		{token.EOF, ""},
 	}

@@ -347,6 +347,8 @@ func TestMeThoughtStatement(t *testing.T) {
 		expectedContent string
 	}{
 		{`me: {"ronquido"}`, "ronquido"},
+		{"me:" + "{\n" +
+			`"ronquido"}`, "ronquido"},
 	}
 
 	for _, tt := range tests {

@@ -34,14 +34,17 @@ const (
 	// Keywords
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
-	WORD     = "WORD"
-	REF      = "REF"
-	CPT      = "CPT"
-	TRUE     = "TRUE"
-	FALSE    = "FALSE"
-	IF       = "IF"
-	ELSE     = "ELSE"
-	RETURN   = "RETURN"
+
+	WORD = "WORD"
+	REF  = "REF"
+	CPT  = "CPT"
+	TR   = "TR"
+
+	TRUE   = "TRUE"
+	FALSE  = "FALSE"
+	IF     = "IF"
+	ELSE   = "ELSE"
+	RETURN = "RETURN"
 
 	// Operators
 	MINUS    = "-"
@@ -70,6 +73,7 @@ var keywords = map[string]TokenType{
 	"word":   WORD,
 	"ref":    REF,
 	"cpt":    CPT,
+	"tr":     TR,
 }
 
 func LookupIdent(ident string) TokenType {

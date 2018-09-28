@@ -555,6 +555,22 @@ func TestConceptAddition(t *testing.T) {
 	}
 }
 
+func TestTranslationAddition(t *testing.T) {
+	input := `tr: snore {"ronquido"};
+	snore
+	`
+
+	evaluated := testEval(input)
+
+	str, ok := evaluated.(*object.String)
+	if !ok {
+		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
+	}
+	if str.Value != "ronquido" {
+		t.Fatalf("object is not '%s', got '%s'", "ronquido", str.Value)
+	}
+}
+
 func TestHashIndexExpressions(t *testing.T) {
 	tests := []struct {
 		input    string

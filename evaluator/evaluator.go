@@ -125,6 +125,13 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 		}
 		env.Set(node.Name.Value, val)
 
+	case *ast.TranslationStatement:
+		val := Eval(node.Value, env)
+		if isError(val) {
+			return val
+		}
+		env.Set(node.Name.Value, val)
+
 	case *ast.WordStatement:
 		val := Eval(node.Value, env)
 		if isError(val) {

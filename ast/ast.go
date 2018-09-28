@@ -92,6 +92,32 @@ func (ws *WordStatement) String() string {
 	return out.String()
 }
 
+type TranslationStatement struct {
+	Token      token.Token // the token.WORD token
+	Name       *Identifier
+	Value      Expression
+	Definition string
+	Defined    bool // If it is defined or not (p)
+}
+
+func (ts *TranslationStatement) statementNode()       {}
+func (ts *TranslationStatement) TokenLiteral() string { return ts.Token.Literal }
+func (ts *TranslationStatement) String() string {
+	var out bytes.Buffer
+
+	out.WriteString(ts.TokenLiteral() + " ")
+	out.WriteString(ts.Name.String())
+	out.WriteString(" = ")
+
+	if ts.Value != nil {
+		out.WriteString(ts.Value.String())
+	}
+
+	out.WriteString(";")
+
+	return out.String()
+}
+
 type ReferenceStatement struct {
 	Token      token.Token // the token.REF token
 	Name       *Identifier

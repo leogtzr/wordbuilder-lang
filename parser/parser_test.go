@@ -147,6 +147,36 @@ func testWordStatement(t *testing.T, s ast.Statement, defined bool, definition, 
 	return true
 }
 
+func testTranslationStatement(t *testing.T, s ast.Statement, defined bool, definition, name string) bool {
+	if s.TokenLiteral() != "tr" {
+		t.Errorf("s.TokenLiteral not 'tr'. got=%q", s.TokenLiteral())
+		return false
+	}
+
+	translationStmt, ok := s.(*ast.TranslationStatement)
+	if !ok {
+		t.Errorf("s not *ast.WordStatement. got=%T", s)
+		return false
+	}
+
+	if translationStmt.Defined != defined {
+		t.Errorf("translationStmt.Defined.Value not '%t'. got=%t", defined, translationStmt.Defined)
+		return false
+	}
+
+	if translationStmt.Definition != definition {
+		t.Errorf("translationStmt.Definition.Value not '%s'. got=%s", definition, translationStmt.Definition)
+		return false
+	}
+
+	if translationStmt.Name.Value != name {
+		t.Errorf("translationStmt.Name.Value not '%s'. got=%s", name, translationStmt.Name.Value)
+		return false
+	}
+
+	return true
+}
+
 func testReferenceStatement(t *testing.T, s ast.Statement, defined bool, name string) bool {
 	if s.TokenLiteral() != "ref" {
 		t.Errorf("s.TokenLiteral not 'ref'. got=%q", s.TokenLiteral())
@@ -255,6 +285,37 @@ func TestWordStatement(t *testing.T) {
 
 		stmt := program.Statements[0]
 		if !testWordStatement(t, stmt, tt.defined, tt.expectedDefinition, tt.expectedIdentifier) {
+			return
+		}
+
+	}
+}
+
+func TestTranslationStatement(t *testing.T) {
+
+	tests := []struct {
+		input              string
+		expectedIdentifier string
+		expectedDefinition string
+		defined            bool
+	}{
+		{"tr: hi;", "hi", "", false},
+		{`tr: snore {"ronquido"}`, "snore", "ronquido", true},
+	}
+
+	for _, tt := range tests {
+		l := lexer.New(tt.input)
+		p := New(l)
+		program := p.ParseProgram()
+		checkParserErrors(t, p)
+
+		if len(program.Statements) != 1 {
+			t.Fatalf("program.Statements does not contain 1 statements. got=%d",
+				len(program.Statements))
+		}
+
+		stmt := program.Statements[0]
+		if !testTranslationStatement(t, stmt, tt.defined, tt.expectedDefinition, tt.expectedIdentifier) {
 			return
 		}
 

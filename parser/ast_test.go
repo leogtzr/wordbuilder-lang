@@ -1,4 +1,4 @@
-package ast
+package parser
 
 import (
 	"testing"
@@ -6,18 +6,19 @@ import (
 	//"wordbuilder/parser"
 	//"wordbuilder/parser"
 	"wordbuilder/token"
+	"wordbuilder/ast"
 )
 
 func TestString(t *testing.T) {
-	program := &Program{
-		Statements: []Statement{
-			&LetStatement{
+	program := &ast.Program{
+		Statements: []ast.Statement{
+			&ast.LetStatement{
 				Token: token.Token{Type: token.LET, Literal: "let"},
-				Name: &Identifier{
+				Name: &ast.Identifier{
 					Token: token.Token{Type: token.IDENT, Literal: "myVar"},
 					Value: "myVar",
 				},
-				Value: &Identifier{
+				Value: &ast.Identifier{
 					Token: token.Token{Type: token.IDENT, Literal: "anotherVar"},
 					Value: "anotherVar",
 				},
@@ -42,12 +43,12 @@ func TestBooleanExpression(t *testing.T) {
 		t.Fatalf("program has not enough statements. got=%d", len(program.Statements))
 	}
 
-	stmt, ok := program.Statements[0].(*ExpressionStatement)
+	stmt, ok := program.Statements[0].(*ast.ExpressionStatement)
 	if !ok {
 		t.Fatalf("program.Statements[0] is not ast.ExpressionStatement. got=%T", program.Statements[0])
 	}
 
-	ident, ok := stmt.Expression.(*Boolean)
+	ident, ok := stmt.Expression.(*ast.Boolean)
 	if !ok {
 		t.Fatalf("exp not *ast.Boolean. got=%T", stmt.Expression)
 	}

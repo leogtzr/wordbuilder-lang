@@ -830,7 +830,7 @@ func TestOperatorPrecedenceParsing(t *testing.T) {
 	}
 }
 
-func TestBooleanExpression(t *testing.T) {
+func TestBooleanExpressions(t *testing.T) {
 	input := "false;"
 
 	l := lexer.New(input)

@@ -187,6 +187,7 @@ func TestWordStatement(t *testing.T) {
 		{"word: bulo (p);", "bulo", false},
 		{"word: calcitrante (p);", "calcitrante", false},
 		{"word: inasequible (p);", "inasequible", false},
+		{`word: bulo -> {"alv"};`, "inasequible", true},
 	}
 
 	for _, tt := range tests {

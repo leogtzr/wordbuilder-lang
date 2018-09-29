@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -32,7 +32,7 @@ func main() {
 
 	programContent, _ := ioutil.ReadAll(programFile)
 
-	fmt.Println(string(programContent))
+	// fmt.Println(string(programContent))
 
 	l := lexer.New(string(programContent))
 	p := parser.New(l)

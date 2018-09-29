@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"wordbuilder/ast"
 	"wordbuilder/object"
-	// "wordbuilder/object"
-	// "wordbuilder/object"
 )
 
 var (
@@ -320,7 +318,6 @@ func evalInfixExpression(operator string, left, right object.Object) object.Obje
 		return newError("type mismatch: %s %s %s",
 			left.Type(), operator, right.Type())
 	default:
-		//return NULL
 		return newError("unknown operator: %s %s %s", left.Type(), operator, right.Type())
 	}
 }

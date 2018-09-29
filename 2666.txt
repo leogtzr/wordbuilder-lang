@@ -1,0 +1,1454 @@
+word: "recalcitrante";
+
+word: "esclusa";
+
+word: "arredrar"
+"1. tr. Apartar, separar. U. t. c. prnl.
+2. tr. Retraer, hacer volver atrás, por el peligro que ofrece o el temor que infunde la ejecución de algo. U. t. c. prnl.
+3. tr. Amedrentar, atemorizar. U. t. c. prnl."
+};
+
+word: "simbiosis";
+
+word: "bucólico" {
+"1. adj. Que evoca de modo idealizado el campo o la vida en el campo.
+2. adj. T. lit. Dicho de un género de poesía o de una composición poética, por lo común dialogada: Que trata de cosas concernientes a los pastores o a la vida campestre."
+};
+
+ref: "William James";
+
+cpt: "von - indicativo de cierta nobleza.";
+
+ref: "DDR - República Democrática Alemana (Deutsche Demokratische Republik)";
+
+ref: "Christian Johann Heinrich Heine (Düsseldorf, 13 de diciembre de 1797-París, 17 de febrero de 1856) fue uno de los más destacados poetas y ensayistas alemanes del siglo XIX.";
+
+ref: "Ernst Jünger (Heidelberg, 29 de marzo de 1895-Riedlingen, 17 de febrero de 1998) fue un escritor, filósofo, novelista e historiador alemán.";
+
+ref: "Arno Schmidt" {"Arno Schmidt (Hamburgo, 18 de enero de 1914 - Celle, 3 de junio de 1979), fue un escritor y traductor alemán."};
+Arno Schmidt fue un individualista, ateo y solipsista convencido y estricto. Su negativismo procedía de la experiencia alemana del Tercer Reich
+y sus terribles consecuencias. Su estilo sigue una línea uniforme
+adaptada al lenguaje coloquial. Desarrolló una ortografía particular con
+la que pretendía mostrar el verdadero significado de las palabras hasta
+desarrollar una teoría atomista de las mismas.
+word: Parvo - Pequeño en tamaño, importancia o cantidad. Un parvo bagaje cultural.
+cpt: "Miguel de Unamuno y Jugo1​ (Bilbao, 29 de septiembre de 1864-Salamanca, 31 de diciembre de 1936) fue un escritor y filósofo español perteneciente a la generación del 98. En su obra cultivó gran variedad de géneros literarios como novela, ensayo, teatro y poesía. Fue, asimismo, diputado en Cortes de 1931 a 1933 por Salamanca.1​ Fue nombrado rector de la Universidad de Salamanca tres veces; la primera vez en 19002​ y la última, de 1931 hasta su destitución, el 22 de octubre de 1936, por orden de Franco.3​"};
+
+cpt: "concitar";
+
+word: exabrupto;
+
+cpt: "Jena" {"Jena https://es.wikipedia.org/wiki/Desastre_de_Jena
+
+La batalla de Jena tuvo lugar el 14 de octubre de 1806, en Jena (Alemania, actual Land de Turingia) paralelamente a la batalla de Auerstädt. Los Franceses mandados por Napoleón y los Prusianos mandados por el general de Hohenlohe, combaten durante la Campaña de Prusia y de Polonia.
+Procurándose una posición más alta desde el comienzo de la
+batalla, Napoleón logra una victoria total que, junto con la del
+mariscal Davout en Auerstädt, precipita la fuga del ejército prusiano, augurando ya el final de la campaña de Prusia."};
+
+word: "exégesis";
+
+word: "adlátere" {"Persona subordinada a otra de la que parece inseparable."};
+
+ref: "Heinrich Boll" {"
+Heinrich Theodor Böll (Colonia, 21 de diciembre de 1917-Langenbroich, 16 de julio de 1985) fue un escritor alemán, figura emblemática de la literatura alemana de posguerra,1​ también llamada "literatura de escombros".2​ En 1972 le fue concedido el Premio Nobel de Literatura. La Academia Sueca
+destacó que «por su combinación de una amplia perspectiva sobre su
+tiempo y una habilidad sensible en la caracterización ha contribuido a
+la renovación de la literatura alemana».3​"};
+
+ref: "Uwe Johnson {"
+Uwe Johnson (*Cammin, Alemania, 20 de julio de 1934 - †Sheerness on Sea, Inglaterra, 22 de febrero de 1984) fue uno de los escritores alemanes de la posguerra más reconocidos. Su obra se incluye dentro de la antinovela."
+};
+
+cpt: "Gunter Grass" {"Günter Wilhelm Grass (Ciudad libre de Dánzig, actual Polonia, 16 de octubre de 1927 - Lübeck, Alemania, 13 de abril de 2015)1​ fue un escritor y artista alemán, galardonado con el Premio Nobel de Literatura y el Premio Príncipe de Asturias de las Letras, en 1999."
+};
+
+cpt: "Friedrich Dürrenmatt" {"
+Friedrich Dürrenmatt (Konolfingen, Cantón de Berna, 5 de enero de 1921 - Neuchâtel, 14 de diciembre de 1990) fue un pintor y escritor suizo en lengua alemana.
+Hombre polifacético, fue un gran autor teatral; escribió, para la radio y
+la televisión, ensayos literarios, filosóficos y novelas, la mayor
+parte policíacas."
+};
+
+cpt: "Louis Charles Antoine Desaix";
+
+Louis Charles Antoine Desaix (Ayat-sur-Sioule, 17 de agosto de 1768 – Marengo, 14 de junio de 1800), jefe militar francés. (A veces, se lo llama Desaix de Veygoux, pero no es su verdadero nombre).
+cpt: "Jean Lannes" {"
+Jean Lannes (Lectoure, Gers, 10 de abril de 1769 - Ebersdorf, 31 de mayo de 1809), duque de Montebello, Mariscal de Francia y Príncipe de Siewierz. Fue uno de los más brillantes militares de Napoleón Bonaparte, de quien fue además amigo personal, hasta el punto de tutearle amistosamente."
+};
+
+cpt: "Hans Jakob Christoph von Grimmelshausen" {"Hans Jakob Christoph von Grimmelshausen (Gelnhausen, 17 de agosto de 1621 - Renchen, 1676) fue un escritor alemán del Barroco."};
+
+cpt: "Andreas Gryphius" {"
+
+Andreas Gryphius es la forma latinizada del nombre de Andreas Greif (Großglogau, Silesia, 2 de octubre de 1616 - 16 de julio de 1664), poeta y dramaturgo barroco alemán de la Primera escuela de Silesia.
+cpt: "Paracelso (Theophrastus Phillippus Aureolus Bombastus von Hohenheim)";
+10 de noviembre de 1493 – Salzburgo, 24 de septiembre de 1541), fue un alquimista, médico y astrólogo suizo.4​ Fue conocido porque se creía que había logrado la transmutación del plomo en oro mediante procedimientos alquímicos y por haberle dado al cinc su nombre, llamándolo zincum.5​"};
+
+word: "rapapolvo" {"m. coloq. Reprensión áspera."};
+
+word: "bulo" {"Noticia falsa propagada con algún fin."};
+
+word: "soporífero" {"ra Que mueve o inclina al sueño."};
+
+ref: "Albert Bitzius" {"Albert Bitzius Jeremias Gotthelf es el pseudónimo de Albert Bitzius (Murten, Friburgo, 4 de octubre de 1797 - Lützelflüh, Berna, 22 de octubre de 1854), un escritor suizo perteneciente al movimiento literario en lengua alemana Biedermeier."};
+
+word: "coloquio" {
+"1. m. Conversación entre dos o más personas.
+2. m. Género de composición literaria, prosaica o poética, en forma de diálogo.
+3. m. Reunión en que se convoca a un número limitado de personas para que debatan un problema, sin que necesariamente haya de recaer acuerdo.
+4. m. Discusión que puede seguir a una disertación, sobre las cuestiones tratadas en ella."
+};
+
+word: "insularidad" {
+"insularidad
+1. f. Cualidad de insular.
+1. adj. Natural de una isla. U. t. c. s.
+2. adj. Perteneciente o relativo a una isla o a los insulares."
+};
+
+word: "baladí" {
+1. adj. De poca importancia.
+};
+word: "periplo" {
+"1. m. Viaje o recorrido, por lo común con regreso al punto de partida.
+2. m. Recorrido o trayectoria espirituales, doctrinales, ideológicos, etc., de una persona.
+3. m. En la geografía antigua, circunnavegación.
+4. m. En la Antigüedad clásica, obra en que se cuenta o refiere un viaje de circunnavegación. El periplo de Hannón."
+};
+
+word: "dispendio" {
+"1. m. Gasto, por lo general excesivo e innecesario.
+2. m. Uso o empleo excesivo de hacienda, tiempo o cualquier caudal."
+};
+
+word: "pérgola" {
+"Del it. pergola, y este del lat. pergŭla 'balcón', 'galería'.
+1. f. Armazón para sostener una planta.
+2. f. Jardín que tienen algunas casas sobre la techumbre."
+};
+
+word: "perenne" {
+"Del lat. perennis.
+1. adj. Continuo, incesante, que no tiene intermisión.
+2. adj. Bot. Que vive más de dos años."
+};
+
+word: "perentorio" {
+"Del lat. tardío peremptorius.
+1. adj. Concluyente o definitivo.
+2. adj. Urgente, apremiante."
+};
+
+word: "erinia" {
+"1. f. En la mitología griega, cada una de las tres divinidades infernales que atormentaban con remordimientos a los autores de malas acciones, especialmente de crímenes. U. m. en pl."
+};
+
+word: "rayana" {
+"rayano, na
+1. adj. Que confina o linda con algo.
+2. adj. Que está en la raya que divide dos territorios.
+3. adj. Cercano, con semejanza que se aproxima a igualdad."
+};
+
+word: "inasequible" {
+"asequible
+Del lat. mod. assequibilis, y este der. del lat. assĕqui 'conseguir, obtener'.
+1. adj. Que puede conseguirse o alcanzarse"
+};
+
+ref: "Chaim Soutine" {
+"Chaim Soutine, nacido Jaím Solomónovich Sutín (Хаим Соломонович Сутин, en ruso) o Jaím Sutsin (Хаім Суцін, en bielorruso) (Smilóvichi, gubernia de Minsk, 1893 – París, 9 de agosto de 1943). Pintor ruso, perteneciente a la denominada Escuela de París."
+};
+
+ref: "Vasili Kandinski" {
+"Vasili Vasílievich Kandinski —en ruso, Васи́лий Васи́льевич Канди́нский, translit.: Vasíli Vasílievič Kandínskij— (Moscú, 4 de diciembrejul./ 16 de diciembre de 1866greg.-Neuilly-sur-Seine, 13 de diciembrede 1944) fue un pintor ruso, precursor de la abstracción en pintura y teórico del arte. Se considera que con él comienza la abstracción lírica y el expresionismo.1"
+};
+
+ref: "George Grosz" {
+"George Grosz, de nombre real Georg Ehrenfried Groß (Berlín, 26 de julio de 1893 - Berlín Oeste, 6 de julio de 1959) fue un pintor alemán de la época expresionista. Fue un miembro prominente del movimiento Dada de Berlín y de la Nueva Objetividad durante su etapa en la República de Weimar, antes de emigrar a los Estados Unidos en 1933. Su estilo de hecho evolucionó del dadaísmo a la nueva objetividad, corriente de la cual fue uno de los principales maestros."
+};
+
+ref: "Oskar Kokoschka" {
+"Oskar Kokoschka (1 de marzo de 1886 - 22 de febrero de 1980) fue un pintor y poeta de origen austríaco, conocido principalmente por sus retratos y paisajes expresionistas."
+};
+
+ref: "James Ensor" {
+"James Ensor (Ostende, 13 de abril de 1860 - 19 de noviembre de 1949) fue un pintor belga que participó en los movimientos de vanguardia de comienzos del siglo XX y que influyó en el expresionismo y en el surrealismo. Vivió en Ostende casi toda su vida. Destacó por la originalidad de su obra. Se le relaciona con el grupo artístico Los XX."
+};
+
+ref: "Thomas Mann" {
+"Thomas Mann (Lübeck, Imperio alemán; 6 de junio de 1875-Zúrich, Suiza; 12 de agosto de 1955) fue un escritor alemán nacionalizado estadounidense. Considerado uno de los escritores europeos más importantes de su generación, es recordado por el profundo análisis crítico que desarrolló en torno al alma europea y alemana en la primera mitad del siglo XX. Para ello tomó como referencias principales a la Bibliay las ideas de Goethe, Freud, Nietzsche y Schopenhauer."
+};
+
+ref: "Heinrich Mann" {
+"Luiz (Ludwig) Heinrich Mann (Lübeck, Imperio alemán; 27 de marzo de 1871-Santa Mónica (California); 11 de marzo de 1950) fue un escritor alemán que destacó por sus novelas de temática social. Sus ataques contra una sociedad cada vez más autoritaria y militarista le llevaron al exilio en 1933."
+};
+
+ref: "Klaus Mann" {
+"Klaus Mann (Múnich, 18 de noviembre de 1906 - Cannes, 21 de mayo de 1949) fue un escritor alemán."
+};
+
+ref: "Alfred Doblin" {
+"Alfred Döblin (Stettin, Pomerania, 10 de agosto de 1878 - Emmendingen, 26 de junio de 1957) fue un médico psiquiatra, escritor alemán, de origen judío polaco y naturalizado francés desde 1936."
+};
+
+ref: "Walter Benjamin" {
+"Walter Bendix Schönflies Benjamin (pseudónimos: Benedix Schönflies, Detlef Holz) (Berlín, Imperio alemán; 15 de julio de 1892 – Portbou, España; 26 de septiembre de 1940) fue un filósofo, crítico literario, traductor y ensayista alemán. Su pensamiento recoge elementos del Idealismo alemán o el Romanticismo, del materialismo histórico y del misticismo judío que le permiten hacer contribuciones perdurables e influyentes en la teoría estética y el Marxismo occidental. Su pensamiento se asocia con la Escuela de Frankfurt.1"
+};
+
+ref: "Anna Seghers" {
+"Anna Seghers (en la vida civil Netty Radványi, nacida Reiling, Maguncia, 19 de noviembre de 1900 - Berlín, 1 de junio de 1983) fue una escritora alemana."
+};
+
+ref: "Stefan Sweig" {
+Stefan Zweig /ʃ'tɛfan tsvaɪk/ (Viena, Austria-Hungría; 28 de noviembre de 1881 – Petrópolis, Brasil; 22 de febrero de 1942) fue un escritor, biógrafo y activista social austríaco judío de la primera mitad del siglo XX, sin parentesco con el escritor Arnold Zweig ni con la escritora alemana Stefanie Zweig (nacida en 1932).
+};
+
+ref: "Bertolt Brecht {";
+Eugen Berthold (Bertolt) Friedrich Brecht (Augsburgo, 10 de febrero de 1898-Berlín Este, 14 de agosto de 1956) fue un dramaturgo y poeta alemán, uno de los más influyentes del siglo XX, creador del teatro épico, también llamado teatro dialéctico.2​
+};
+ref: "Lion Feuchtwanger {";
+Lion Feuchtwanger [ˈli:ɔn ˈfɔ͡ø̯çtˌv̥aŋɐ] (Múnich, Alemania, 7 de julio de 1884 - Los Ángeles, Estados Unidos, 21 de diciembre de 1958), que escribió un tiempo bajo el pseudónimo de J. L. Wetcheek, fue un novelista alemán.
+};
+ref: "Ricarda Huch {";
+Ricarda Octavia Huch (* 18 de julio de 1864 en Braunschweig; † 17 de noviembre de 1947 en Schönberg im Taunus, hoy parte de Kronberg; pseudónimo: Richard Hugo) fue una poeta alemana, filósofa e historiadora.
+};
+ref: "Hans Fallada {";
+Rudolf Wilhelm Friedrich Ditzen, cuyo seudónimo era Hans Fallada (Greifswald, 21 de julio de 1893 - Berlín, Alemania, 5 de febrero de 1947) fue un escritor alemán. Es uno de los autores alemanes más famosos del siglo XX. Sus obras están relacionadas en su mayor parte con la nueva objetividad.
+};
+
+word: concitar {
+"1. tr. Provocar o causar algo, como un sentimiento o una reacción. Concitarexpectación. Concitó las iras de los presentes.
+2. tr. Reunir personas o cosas. U. t. c. prnl.
+3. tr. Instigar a alguien contra otra persona."
+};
+
+word: prosodia {
+"1. f. Fon. Parte de la gramática que enseña la recta pronunciación y acentuación.
+2. f. Fon. Estudio fonético y fonológico de los elementos que se refieren aunidades superiores al fonema, como las sílabas u otras secuencias de la palabrau oración.
+3. f. Métr. Estudio de los rasgos fónicos que afectan a la métrica, especialmentede los acentos y de la cantidad.
+4. f. métrica (‖ arte que trata de la medida de los versos)."
+};
+
+ref: "Dostoievsky y la epilepsia" {
+"http://www.elsevier.es/es-revista-neurologia-295-articulo-la-epilepsia-gestacion-artistica-dostoievski-S0213485311002465"
+};
+
+ref: "Gulash o Goulash" {
+"Gulash (en húngaro: gulyás, boyero) es un plato especiado, elaborado principalmente con carne de res, cebollas, pimiento y pimentón, originario de Hungria, aunque se encuentran variantes de este estofado en los países vecinos."
+};
+
+ref: Kobe {
+"Kōbe (神戸市 Kōbe-shi?, literalmente "Puerta de los dioses o espíritus") es una ciudad y municipio de Japón. Con una población de 1,5 millones de habitantes es la capital y ciudad más poblada de la prefectura de Hyōgo, y la sexta ciudad más poblada del país, por delante de Kioto."
+};
+
+word: vehemente {
+"Del lat. vehĕmens, -entis.
+1. adj. Que tiene una fuerza impetuosa. Un discurso vehemente.
+2. adj. Ardiente y lleno de pasión.
+3. adj. Dicho de una persona: Que obra de forma irreflexiva, dejándose llevar porlos impulsos."
+};
+
+ref: "Charles Baudelaire" {
+"Charles Pierre Baudelaire (pronunciación en inglés: /ˌ/ ( escuchar);1​ pronunciación en francés: /ʃaʁl bodlɛʁ/ ( escuchar) (París, 9 de abril de 1821-31 de agosto de 1867) fue un poeta, ensayista, crítico de arte y traductorfrancés."
+};
+
+ref: "Paul Verlaine" {
+"Paul Marie Verlaine (Metz, 30 de marzo de 1844-París, 8 de enero de 1896), conocido como Paul Verlaine, fue un poeta francés, perteneciente al movimiento simbolista."
+};
+
+ref: "Francis Bacon" {
+"Francis Bacon, primer barón Verulam, primer vizconde de Saint Albans y canciller de Inglaterra (Strand, Londres, 22 de enero de 1561-Highgate, Middlesex, 9 de abril de 1626) fue un célebre filósofo, político, abogado y escritor inglés, padre del empirismo filosófico y científico."
+};
+
+ref: "España - El Escorial" {
+"El Real Monasterio de San Lorenzo de El Escorial es un complejo que incluye un palacio real, una basílica, un panteón, una biblioteca , un colegio y un monasterio. Se encuentra en la localidad española de San Lorenzo de El Escorial, en la Comunidad de Madrid, y fue construido entre 1563 y 1584."
+};
+
+word: tablao {
+"Sínc. de tablado.
+1. m. Tablado, escenario dedicado al cante y baile flamencos.
+2. m. Local dedicado a espectáculos de baile y cante flamencos."
+};
+
+ref: "Salónica (Ciudad en Grecia)" {
+"Salónica o Tesalónica2​ ([θɛsalɔˈnikʲi] en griego, Θεσσαλονίκη, Thessaloníki3​ o Σαλονίκη, Saloníki) es la segunda ciudad de Grecia, capital de la región de Macedonia Central y un puerto importante del norte del Egeo. Tiene una población (incluyendo las afueras) de 1.104.460 habitantes."
+};
+
+word: algaraza {
+". m. Ar. y Guad. Lluvia de duración corta y de intensidad regular."
+};
+
+word: aupar {
+"1. tr. Levantar o subir a alguien. U. t. c. prnl.
+2. tr. Ensalzar, enaltecer. U. t. c. prnl."
+};
+
+word: hugonotes {
+"Del fr. huguenot 'partidario de la unión de Ginebra con Suiza', y este alterac. del al. Eidgenosse 'confederado', infl. por Hugues, nombre del jefe del partido suizo en Ginebra a principios del siglo XVI.
+Para el f., u. m. la forma hugonote.
+1. adj. Seguidor de la doctrina de Calvino en Francia. Apl. a pers., u. t. c. s.
+2. adj. Perteneciente o relativo a los hugonotes."
+};
+
+word: perorata {
+"perorata
+De perorar.
+1. f. Discurso o razonamiento, generalmente pesado y sin sustancia."
+};
+
+word: Solipsismo {
+"Doctrina filosófica que defiende que el sujeto pensante no puede afirmar ninguna existencia salvo la suya propia."
+};
+
+word: Pirenaico {
+"De los Pirineos, sistema montañoso del sur de Europa que separa España y Francia, o relacionado con ellos."
+};
+
+word: Erinia {
+"1. f. En la mitología griega, cada una de las tres divinidades infernales que atormentaban con remordimientos a los autores de malas acciones, especialmente de crímenes. U. m. en pl."
+};
+
+ref: Hécate {
+"Hécate (en griego antiguo Ἑκάτη
+Hekátē o Ἑκάτα Hekáta) fue originalmente una diosa de las tierras
+salvajes y los partos, nacionalizada primero en la Grecia micénica​ o en
+Tracia, pero originada entre los carios de Anatolia,​ la región donde
+se atestiguan la mayoría de sus nombres teofóricos, como Hecateo o
+Hecatomno"
+};
+
+ref: "Baudelaire" {
+"Charles Pierre Baudelaire fue un poeta, ensayista, crítico de arte
+y traductor francés. Paul Verlaine lo incluyó entre los poetas malditos
+de Francia del siglo XIX, debido a su vida bohemia y de excesos, y a la
+visión del mal que impregna su obra."
+};
+
+ref: Nerval {
+"Gérard de Nerval (París, 22 de mayo de 1808 – 26 de enero de 1855) era el seudónimo literario del poeta, ensayista y traductor francés Gérard Labrunie, el más esencialmente romántico de los poetas franceses."
+};
+
+word: Lid {
+"Del lat. lis, litis.
+1. f. Combate, pelea.
+2. f. Disputa, contienda de razones y argumentos.
+3. f. Der. En lo antiguo, prueba judicial mediante el reto y duelo de las partes.
+4. f. desus. Pleito judicial."
+};
+
+ref: Mnémosine {
+"En la mitología griega, Mnemósine o Mnemosina (en griego antiguo Μνημοσύνη Mnēmosýnē, de μνήμη mnếmē, ‘memoria’), a menudo confundida con Mneme, era la personificación de la memoria. Esta Titánide era la hija de Gea y Urano, y la madre de las Musas con Zeus."
+};
+
+ref: Euríloco {
+"En la mitología griega, Euríloco (griego antiguo Εὐρύλοχος) es uno de los compañeros de Ulises, con quien estaba emparentado por el matrimonio con su hermana menor Ctímene.1​ En la Odisea de Homero aparece como un lugarteniente de Ulises durante el viaje de regreso a Ítaca tras la guerra de Troya."
+};
+
+ref: "Las vacas de Zeus";
+
+ref: Prometeo {
+"En la mitología griega, Prometeo (en griego antiguo Προμηθεύς, ‘previsión’, ‘prospección’) es el Titán amigo de los mortales, honrado principalmente por robar el fuego de los dioses en el tallo de una cañaheja, darlo a los hombres para su uso y posteriormente ser castigado por Zeus por este motivo."
+};
+
+ref: "Gustave Moreau" {
+"Gustave Moreau (París, 6 de abril de 1826-íd., 18 de abril de 1898) fue un pintor francés, precursor del simbolismo, y célebre por su estética decadente. Se formó en el Romanticismo, y con un profundo conocimiento de los pintores italianos del Renacimiento, desarrolló un estilo personal con el que se anticipó al simbolismo francés a finales del siglo XIX."
+};
+
+ref: "Odilon Redon" {
+"Odilon Redon (20 de abril de 1840–6 de julio de 1916) fue un pintor simbolista, nacido en Burdeos, Aquitania, Francia. Es considerado un pintor postimpresionista, dentro de la corriente del simbolismo, aunque también se le considera como uno de los precursores del surrealismo."
+};
+
+word: derrotero {
+"derrotero
+De derrota1 'camino, rumbo'.
+1. m. Camino, rumbo, medio tomado para llegar al fin propuesto.
+2. m. Conjunto de datos que indican el camino para llegar a un lugar determinado."
+};
+
+word: reminiscencia {
+"reminiscencia
+Del lat. tardío reminiscentia, y este der. del lat. reminisci 'recordar'.
+1. f. Acción de representarse u ofrecerse a la memoria el recuerdo de algo quepasó.
+2. f. Recuerdo vago e impreciso."
+};
+
+ref: "El libro de cocina de Juana Inés de la Cruz";
+
+ref: "Nuevo decadentismo";
+
+word: facsímil {
+"facsímil
+Del lat. fac 'haz', 2.ª pers. de sing. del imper. de facĕre 'hacer', y simĭle 'semejante'.
+1. m. Perfecta imitación o reproducción de una firma, de un escrito, de un dibujo, de un impreso, etc."
+};
+
+ref: Magreb {
+"Magreb (en árabe: المغرب al-Maġrib; en bereber: Tamazgha) es la adaptación al castellano o español de una voz árabe que significa "lugar por donde se pone el sol", el Poniente, la parte más occidental del mundo árabe. Las grafías Maghrib o Maghreb, empleadas en inglés y francés con el dígrafo "gh", tratan de transcribir el fonema /ɣ/. Antiguamente se utilizaron también las transcripciones desusadas Mogreb y su gentilicio mogrebí.1​"
+};
+
+word: singladura {
+"De singlar.
+1. f. Mar. Distancia recorrida por una nave en 24 h, que ordinariamente empiezana contarse desde las 12 del día.
+2. f. Mar. En las navegaciones, intervalo de 24 h que empiezan ordinariamente acontarse desde las 12 del día.
+3. f. rumbo (‖ dirección trazada en el plano del horizonte)."
+};
+
+ref: Chianti {
+"El Chianti (/ˈki̯anti/) es uno de los vinos tintos italianos más prestigiosos y conocidos en el mundo.
+Históricamente se produce en tres aldeas en la provincia de Siena: Radda in Chianti, Castellina in Chianti y Gaiole in Chianti situadas en las Colinas del Chianti."
+};
+
+ref: Alitalia {
+"Alitalia – Società Aerea Italiana, que opera bajo el nombre Alitalia, es la principal aerolínea de Italia creada en 2009 que compró los derechos de marca, derechos aeroportuarios y de rutas, parte de la flota de aviones y otras propiedades de la vieja Alitalia durante el proceso de liquidación por quiebra de esta última, así como los activos de Air One."
+};
+
+word: indemne {"libre o extento de daño"};
+
+ref: "Serpentine Gallery";
+
+ref: "Albert Memorial";
+ref: "Berte Morisot";
+
+word: tándem {
+"1. m. Bicicleta para dos personas, que se sientan una tras otra, provista depedales para ambos."
+};
+
+ref: Borchmeyer;
+
+word: alfeñique {
+"2. m. coloq. Persona delicada de cuerpo y complexión."
+};
+
+ref: "Jacob Ebstein" {
+"Jacob Epstein (10 de noviembre de 1880 – 19 de agosto de 1959) fue un escultor nacido en Estados Unidos, que trabajó principalmente en Inglaterra. Su obra creó polémica en ocasiones, cuestionando ideas convencionales sobre las obras de arte en lugares públicos. Sus padres fueron refugiados judíos de Polonia en Nueva York, donde Epstein estudió arte, a pesar de la oposición familiar. Se trasladó a Europa, concretamente a Francia, en 1902 y estudió en París, donde fue alumno de Auguste Rodin. Epstein estuvo relacionado con los vorticistas entre 1912 y 1914, capitaneados por Wyndham Lewis, participando con un dibujo suyo en el primer número de la publicación Blast, que estaba encuadrada en esa tendencia artística."
+};
+
+word: badulaque {
+"1. m. Afeite compuesto de varios ingredientes, que se usaba en otro tiempo.
+2. m. desus. chanfaina (‖ guisado de bofes o livianos).
+3. m. y f. Persona necia, inconsistente. U. t. c. adj.
+4. m. y f. Ec. Persona impuntual en el cumplimiento de sus compromisos."
+};
+
+ref: Medusa {
+"En la mitología griega, Medusa (en griego antiguo Μέδουσα Médousa, ‘guardiana’, ‘protectora’)1​ era un monstruo ctónico femenino, que convertía en piedra a aquellos que la miraban fijamente a los ojos. Fue decapitada por Perseo, quien después usó su cabeza como arma2​ hasta que se la dio a la diosa Atenea para que la pusiera en su escudo, la égida. Desde la antigüedad clásica, la imagen de la cabeza de Medusa aparece representada en el artilugio que aleja el mal conocido como Gorgoneion.3"
+};
+
+ref: Hesiodo {
+"Hesíodo (en griego antiguo Ἡσίοδος Hēsíodos, en latín Hēsiodus) fue un poeta de la Antigua Grecia. Su datación en torno al año 700 a. C. es discutida. Se le considera el primer filósofo griego; dado que en su obra le otorga alegoría de «ser» a los aspectos transitorios o recurrentes de lo fenomenológico, Hesíodo se eleva por encima de las concepciones religiosas primitivas, aproximándose al pensamiento filosófico que pretende interpretar la realidad por medio de categorías conceptuales permanentes."
+};
+
+ref: Crisaor {
+"En la mitología griega, Crisaor (en griego Χρυσάωρ, ‘espada dorada’, de χρυσός chrysos, ‘oro’ y ἄορ aor, ‘espada’) era hijo de Poseidón y Medusa. Fue concebido cuando Poseidón estuvo con Medusa en un templo de Atenea quien, enfurecida por la profanación, la transformó en una Gorgona. Así, Crisaor y su hermano, el caballo alado Pegaso, no nacieron hasta que Perseo decapitó a Medusa. Algunas versiones cuentan que nacieron de las gotas de sangre, y otras que brotaron del cuello de Medusa, un nacimiento «más elevado», como el de Atenea de la cabeza de Zeus."
+};
+
+ref: Geriones {
+"En la mitología griega, Gerión (en griego antiguo Γηρυών Gêruôn o Γηρυόνης Gêruônês) era un monstruoso gigante, hijo de Crisaor y Calírroe.
+Gerión es descrito como un ser antropomorfo formado por tres cuerpos, con sus respectivas cabezas y extremidades, según la mayoría de las versiones. Aunque no se suele especificar la forma exacta de la unión entre los tres cuerpos, se le suele representar con una unión lineal o radial por las cinturas."
+};
+
+word: liceo {
+"1. m. Institución cultural o recreativa.
+2. m. En algunos países, instituto (‖ centro estatal de enseñanza secundaria).
+3. m. Escuela de Aristóteles."
+};
+
+cpt: "gorgona" {
+"En la mitología griega, una gorgona (en griego antiguo γοργώ gorgō o γοργών gorgōn, "terrible") era un despiadado monstruo femenino a la vez que una deidad protectora procedente de los conceptos religiosos más antiguos. Su poder era tan grande que cualquiera que intentase mirarla quedaba petrificado, por lo que su imagen se ubicaba en todo tipo de lugares, desde templos a cráteras de vino, para propiciar su protección. La gorgona llevaba un cinturón de serpientes, entrelazadas como una hebilla y confrontadas entre sí."
+
+};
+
+word: trattoria {
+"a trattoria (IPA [trattoˈria]) es un local o tipo de restaurante en Italia. En las trattorias no se sirve comida bajo un menú, se paga por cubierto (coperto), el ambiente es informal y relajado y los precios de las comidas son bajos. Son los restaurantes más visitados en las pausas de mediodía, o durante el almuerzo. Se procura tener una clientela fija y estable. El nombre proviene de trattore que en italiano significa 'preparar'."
+};
+
+word: caustico {
+"cáustico, ca
+Del lat. caustĭcus, y este del gr. καυστικός kaustikós, der. de καίειν kaíein 'quemar'.
+1. adj. Dicho de una cosa: Que quema y destruye los tejidos animales.
+2. adj. Mordaz o agresivo en lo que dice."
+};
+
+word: tropo {
+"2. m. Ret. Empleo de una palabra en sentido distinto del que propiamente lecorresponde, pero que tiene con este alguna conexión, correspondencia osemejanza. La metáfora, la metonimia y la sinécdoque son tipos de tropos."
+};
+
+word: macarra {
+"macarra
+Del cat. macarró, y este del fr. maquereau.
+1. adj. Dicho de una persona: Agresiva, achulada. U. t. c. s.
+2. adj. Vulgar, de mal gusto. Apl. a pers., u. t. c. s.
+3. m. rufián (‖ hombre dedicado al tráfico de la prostitución)."
+};
+
+word: cafiche {
+"Cf. cafisho.
+1. m. despect. Chile. proxeneta."
+};
+
+ref: "Anthony Perkins";
+
+word: nimias {
+"1. adj. Dicho generalmente de algo no material: Insignificante, sin importancia.
+2. adj. Dicho generalmente de algo no material: Excesivo, exagerado.
+3. adj. Prolijo, minucioso, escrupuloso."
+};
+
+word: espita {
+"espita
+Del gót. *spĭtus 'asador'.
+1. f. Medida lineal de un palmo."
+};
+
+word: affaire {
+"affaire
+Voz fr.
+1. m. Negocio, asunto o caso ilícito o escandaloso."
+};
+
+ref: magrebies {
+"Árabe magrebí es un término que cubre las variedades del árabe hablado en el Magreb, incluyendo Marruecos, Túnez, Argelia y Libia. En Argelia, el magrebí se enseña como una materia independiente, y existen algunos libros de texto."
+};
+
+word: inocular {
+"inocular
+Del lat. inoculāre 'injertar', 'inculcar'.
+1. tr. Biol. y Med. Introducir en un organismo una sustancia que contiene losgérmenes de una enfermedad.
+2. tr. Pervertir, contaminar a alguien con el mal ejemplo o la falsa doctrina. U. t. c. prnl."
+};
+
+word: liliputiense {
+"liliputiense
+Por alus. a los habitantes de Liliput, imaginados por J. Swift, 1667-1745, en sus Viajes de Gulliver.
+1. adj. Dicho de una persona: Extremadamente pequeña o endeble. U. t. c. s."
+};
+
+word: heterodoxa {
+"heterodoxo, xa
+Del gr. ἑτερόδοξος heteródoxos.
+1. adj. Que se aparta de la doctrina oficial de una religión. U. t. c. s.
+2. adj. Discrepante de la doctrina fundamental de un sistema político, filosófico, etc.
+3. adj. Disconforme con hábitos o prácticas generalmente admitidos. Forma devestir heterodoxa."
+};
+
+word: sita {
+"sito, ta
+Del lat. situs, part. pas. de sinĕre 'dejar'.
+1. adj. Situado o fundado."
+};
+
+word: lozano {
+"lozano, na
+1. adj. Dicho de una planta: Vigorosa y frondosa. U. t. en sent. fig.
+2. adj. Dicho de una persona: De aspecto saludable."
+};
+
+word: interregno {
+"interregno
+Del lat. interregnum.
+1. m. Espacio de tiempo en que un Estado no tiene soberano."
+};
+
+word: displicencia {
+"displicencia
+Del lat. displicentia.
+1. f. Desagrado o indiferencia en el trato.
+2. f. Desaliento en la ejecución de una acción, por dudar de su bondad odesconfiar de su éxito."
+};
+
+ref: "Auguste Demarre";
+
+word: óbice {
+"óbice
+Del lat. obex, -ĭcis 'cerrojo', 'obstáculo'.
+1. m. Obstáculo, embarazo, estorbo, impedimento."
+};
+
+word: helvético {
+"helvético, ca
+1. adj. Natural de Helvecia, hoy Suiza, país de Europa. U. t. c. s.
+2. adj. Natural de Suiza. U. t. c. s."
+};
+
+word: lenitivo {
+"lenitivo, va
+Der. del ant. lenir 'lenificar', y este del lat. lenīre.
+1. adj. Que tiene virtud de ablandar y suavizar.
+2. m. Medicamento que sirve para ablandar o suavizar.
+3. m. Medio para mitigar los sufrimientos del ánimo."
+};
+
+word: pretil {
+"pretil
+Por *petril, del lat. *pectorīle, de pectus, -ŏris 'pecho1'.
+1. m. Murete o vallado de piedra u otra materia que se pone en los puentes y enotros lugares para preservar de caídas.
+2. m. Sitio llano, calzada o paseo a lo largo de un pretil."
+};
+
+word: antologado {
+    "antólogo, ga
+    1. m. y f. Colector de una antología."
+};
+
+word: basalto {
+    "basalto
+    Del lat. basaltes.
+    1. m. Roca volcánica, por lo común de color negro o verdoso, de grano fino, muy dura, compuesta principalmente de feldespato y piroxena o augita, y a veces de estructura prismática."
+};
+
+word: sendo {    
+"sendos, das
+Del lat. singŭli, -ōrum.
+1. adj. pl. Uno cada uno o uno para cada uno de dos o más personas o cosas. U."
+};
+
+ref: "G. K. Chesterton" {
+    "Gilbert Keith Chesterton (pronunciado como /'gɪlbət ki:θ 'ʧestətən/, Londres, 29 de mayo de 1874-Beaconsfield, 14 de junio de 1936), más conocido como G. K. Chesterton, fue un escritor y periodista británico de inicios del siglo XX. Cultivó, entre otros géneros, el ensayo, la narración, la biografía, la lírica, el periodismo y el libro de viajes.
+    Se han referido a él como el «príncipe de las paradojas».1​ Su personaje más famoso es el Padre Brown, un sacerdote católico de apariencia ingenua, cuya agudeza psicológica lo vuelve un formidable detective, y que aparece en más de cincuenta historias reunidas en cinco volúmenes, publicados entre 1911 y 1935."
+};
+
+word: capear {
+    "1. tr. Eludir con habilidad un compromiso o una situación difícil. Han logrado capear la crisis económica.
+    2. tr. Hacer suertes con la capa al toro o al novillo.
+    3. tr. coloq. Entretener a alguien con engaños o evasivas."
+};
+
+word: hierático {
+"hierático, ca
+Del lat. hieratĭcus, y este del gr. ἱερατικός hieratikós.
+1. adj. Dicho de un estilo o de un ademán: Que tiene o afecta solemnidad extrema, aunque sea en cosas no sagradas.
+2. adj. Perteneciente o relativo a las cosas sagradas o a los sacerdotes de la Antigüedad pagana."
+};
+
+word: baldado {
+    "baldado2, da
+    Del part. de baldar.
+    1. adj. Muy cansado, agotado físicamente.
+    2. adj. Pan. tuberculoso (‖ que padece tuberculosis). U. t. c. s."
+};
+
+word: "Filippo Brunnelleschi" {
+"Filippo di Ser Brunellesco Lapi, conocido simplemente como Filippo Brunelleschi (1377 - 15 de abril de 1446), fue un arquitecto, escultor y orfebre renacentista italiano. Es conocido, sobre todo, por su trabajo en la cúpula de la Catedral de Florencia Il Duomo. Sus profundos conocimientos matemáticos y su entusiasmo por esta ciencia le facilitaron el camino en la arquitectura, además de llevarlo a la invención de la perspectiva cónica.1"
+};
+
+word: "Alfonso Reyes Ochoa" {
+    "Alfonso Reyes Ochoa (Monterrey, Nuevo León, 17 de mayo de 1889 — Ciudad de México, 27 de diciembre de 1959), conocido como Alfonso Reyes, fue un poeta, ensayista, narrador, diplomático y pensador mexicano. Se le conoce también como «el regiomontano universal».1​"
+};
+
+word: estrambótico {
+"estrambótico, ca
+1. adj. coloq. Extravagante, irregular y sin orden."
+};
+
+word: corro {    
+"Quizá del lat. currus 'carro1'; cf. corral.
+1. m. Cerco que forma la gente para hablar, para solazarse, etc.
+2. m. Espacio que incluye un corro.
+3. m. Espacio circular o casi circular."
+};
+
+word: solaz {
+    "solaz
+    Del occit. ant. solatz, y este del lat. solacium.
+    1. m. Consuelo, placer, esparcimiento, alivio de los trabajos."
+};
+
+ref: Voltaire {
+    "François-Marie Arouet (París, 21 de noviembre de 1694 – ibid., 30 de mayo de 1778), más conocido como Voltaire, fue un escritor, historiador, filósofo y abogado francés, que perteneció a la masonería y figura como uno de los principales representantes de la Ilustración, un período que enfatizó el poder de la razón humana, de la ciencia y el respeto hacia la humanidad. En 1746 Voltaire fue elegido miembro de la Academia Francesa en la que ocupó el asiento número 33."
+};
+
+ref: Piranesi {
+    "Giovanni Battista Piranesi [dʒoˈvanni batˈtista piraˈneːzi] (Mogliano Veneto, cerca de Treviso, 4 de octubre de 1720 – Roma, 9 de noviembre de 1778) fue un arqueólogo, arquitecto, investigador y grabador italiano. Realizó más de 2.000 grabados de edificios reales e imaginarios, estatuas y relieves de la época romana así como diseños originales para chimeneas y muebles."
+};
+
+word: munificente {    
+"munificencia
+Del lat. munificentia.
+1. f. Generosidad espléndida.
+2. f. Largueza, liberalidad del rey o de un magnate."
+};
+
+word: insigne {
+"insigne
+Del lat. insignis.
+1. adj. célebre."
+};
+
+ref: "Mijíl Bulgakov" {
+"Mijaíl Afanásievich Bulgákov (en ruso, Михаил Афанасьевич Булгаков; 3 de mayojul./ 15 de mayo de 1891greg. – 10 de marzo de 1940) fue un escritor, dramaturgo y médico soviético de la primera mitad del siglo XX. Su obra más conocida es la novela El maestro y Margarita considerada una obra maestra que fue publicada postumamente."
+};
+
+word: tácito {
+"tácito, ta
+Del lat. tacĭtus, part. pas. de tacēre 'callar'.
+1. adj. Callado, silencioso.
+2. adj. Que no se entiende, percibe, oye o dice formalmente, sino que se supone e infiere."
+};
+
+ref: "Marcel Schwob" {
+    "Marcel Schwob (Chaville, Hauts-de-Seine, 23 de agosto de 1867 – París, 26 de febrero de 1905) fue un escritor, crítico literario y traductor judío francés, autor de relatos y de ensayos donde combina erudición y experiencia vital. La brevedad de su vida no le impidió desarrollar una obra singular y personal, muy próxima al simbolismo."
+};
+
+word: galerada {
+"Carga que cabe en una galera (carro)."
+};
+
+ref: "Periquillo Sarniento" {
+"El Periquillo Sarniento es considerada la obra cumbre del escritor mexicano José Joaquín Fernández de Lizardi, publicada por primera ocasión en 1816, durante la guerra de Independencia de México.1​
+A Lizardi se lo ha reconocido como el precursor de la literatura romántica
+en México, un autor producto de la Ilustración y de naturaleza rebelde.
+María :Publicó uno de los primeros periódicos del México insurgente,
+al cual tituló con lo que después sería su seudónimo, «El Pensador
+Mexicano»; la imprenta fue clausurada por el gobierno virreinal con la
+acusación de que estimulaba perniciosamente la imaginación de sus
+lectores y podía causar otra rebelión en la Nueva España."
+};
+
+word: cohorte {
+"Del lat. cohors, -ortis.
+1. f. Conjunto, número, serie. Cohorte de males.
+2. f. Unidad táctica del antiguo ejército romano que tuvo diversas composiciones."
+};
+
+word: párvulario {
+"De párvulo.
+1. m. Lugar donde se cuida y educa a párvulos.
+2. m. Conjunto de los niños que reciben educación preescolar."
+};
+
+ref: "Paul Valéry" {
+"Ambroise-Paul-Toussaint-Jules Valéry (Sète, 30 de octubre de 1871 – París, 20 de julio de 1945) fue un escritor, poeta, ensayista y filósofo francés. Como poeta es el principal representante de la llamada poesía pura; como prosista y pensador (él se consideraba antifilósofo), la lectura y comentario de sus textos ha sido muy notable, desde Theodor Adorno y Octavio Paz hasta Jacques Derrida, que le comentó hasta en su último seminario."
+};
+
+word: proscenio {
+"Del lat. proscenĭum, y este del gr. προσκήνιον proskḗnion.
+1. m. Parte del escenario de un teatro más inmediata al público.
+2. m. En el antiguo teatro griego y latino, espacio comprendido entre la escena y la orquesta."
+};
+
+word: platea {"Patio o parte baja de los teatros."};
+
+word: lasitud {"desfallecimiento, cansancio, falta de fuerzas"};
+
+ref: "Louis-Ferdinand Céline" {
+"Louis Ferdinand Auguste Destouches (Courbevoie, 27 de mayo de 1894 – París, 1 de julio de 1961), más conocido por su seudónimo Louis-Ferdinand Céline escuchar (?·i) o sólo por Céline,1​ fue un escritor y médico francés.
+Se le considera uno de los escritores más influyentes del siglo
+XX, pues desarrolló un nuevo estilo de escritura que modernizó tanto la
+literatura francesa como la universal. Tras Marcel Proust, es el autor más traducido y popular de la literatura francesa del siglo XX; su novela más famosa es Viaje al fin de la noche."
+};
+
+ref: "Deieu La Rochelle" {
+"Pierre Drieu La Rochelle (París, 3 de enero de 1893-París, 15 de marzo de 1945) fue un escritor y periodista francés, defensor de la colaboración con la Alemania nazi durante la ocupación de Francia.1​"
+};
+
+ref: "Charles Maurras" {
+"Charles Maurras (Martigues, 20 de abril de 1868 - Tours, 16 de noviembre de 1952) fue un político de extrema derecha, poeta y escritor francés, principal referente e ideólogo de Action Française (Acción Francesa), un movimiento político que era monárquico, antisemita, antiparlamentarista y contrarrevolucionario.1​2​3​4​5​"
+};
+
+word: prohombre {
+"Etim. disc.
+1. m. Hombre de personalidad muy destacada, que goza de gran consideración.
+2. m. En los gremios de los artesanos, veedor o maestro del mismo oficio, que por su probidad y conocimientos se elegía para el gobierno del gremio."
+};
+
+word: admonición {
+"Del lat. admonitio, -ōnis.
+1. f. amonestación (‖ acción de amonestar)."
+};
+
+ref: "Doktor Koenig";
+
+ref: "Rafael Dieste";
+"Rafael Francisco Antonio Olegario Dieste Gonçalves (Rianxo (La Coruña) 1899 – Santiago de Compostela (La Coruña), 15 de octubre de 1981) escritor español bilingüe en gallego y español. Hermano de Eduardo Dieste y tío del ingeniero Eladio Dieste. Ocasionalmente utilizaba algún seudónimo, como Félix Muriel."
+};
+
+ref: "Pierre Michon" {
+"Pierre Michon (Cards, Châtelus-le-Marcheix, Creuse, 28 de marzo de 1945) es un escritor francés."
+};
+
+ref: "Olivier Rolin" {
+"Olivier Rolin es un escritor francés. Ganó el Prix Femina en 1994, por su novela Port-Soudan.
+Su hermano Jean es también escritor y periodista."
+};
+
+ref: "Javier Marias Franco" {
+"Javier Marías Franco (n. Madrid, 20 de septiembre de 1951) es un escritor, traductor y editor español, miembro de número de la Real Academia Española, donde ocupa el sillón «R»"
+};
+
+ref: "Enrique Vila Matas" {
+"Enrique Vila-Matas (Barcelona, 31 de marzo de 1948) es un escritor español, autor de más de una treintena de obras, que incluyen novelas, ensayos y otros tipos de narrativa y libros misceláneos.
+Su obra ha sido reconocida con diversos premios, tales como el Rómulo Gallegos, Médicis y FIL de Literatura en Lenguas Romances, entre otros, y ha sido traducida a más de treinta idiomas."
+};
+
+word: sofrenar {
+"1. tr. Dicho de un jinete: Reprimir a la caballería tirando violentamente de las riendas.
+2. tr. Reprender con aspereza a alguien.
+3. tr. Hacer que remita algo, especialmente una pasión del ánimo."
+};
+
+word: ágape {
+"Del lat. tardío agăpe, y este del gr. ἀγάπη agápē 'afecto, amor'.
+1. m. Comida fraternal de carácter religioso entre los primeros cristianos, destinada a estrechar los lazos que los unían.
+2. m. banquete (‖ comida para celebrar algún acontecimiento)."
+};
+
+word: lipotimia {
+"Del gr. λιποθυμία lipothymía.
+1. f. Med. Pérdida súbita y pasajera del sentido y del movimiento."
+};
+
+word: subrepción;
+
+ref: "Albert Kessler";
+
+word: tarascada {"golpe, mordedura o herida."};
+
+word: digresión
+
+word: tropel;
+
+word: remansar;
+
+word: plétora gran abundancia de algo.
+
+word: vejaciones;
+
+word: encomio alabanza encarecida
+
+word: algarabia;
+
+word: impelido;
+
+word: nimbos;
+
+word: impertérrito;
+
+word: fehaciente {
+"Del ant. fefaciente, y este de fe1 y el ant. faciente 'que hace'.
+1. adj. Que hace fe, fidedigno."
+};
+
+ref: "Laberinto de Ariadna" {
+"Ariadna es la hija del rey Minos y Pasifae de Creta. Su padre tenía en un laberinto
+al minotauro, a quien había que alimentar con gente ateniense cada
+nueve años. La tercera vez que los atenienses debían pagar su tributo,
+Teseo, -hijo de Egeo, el rey de Atenas- se ofrece a ir y matar al
+minotauro."
+};
+
+word: tastar {
+"De or. inc.
+1. tr. desus. tocar (‖ llegar con la mano).
+2. tr. desus. Gustar con el paladar las cosas."
+};
+
+word: apoltronarse {
+"apoltronarse
+1. prnl. Dicho de una persona, especialmente de la que lleva vida sedentaria: Hacerse poltrona.
+2. prnl. Arrellanarse, repantigarse."
+};
+
+word: molondra {
+"molondra
+Cruce fest. de mondo, orondo y remolón2.
+1. f. coloq. Ál. y Mur. Cabeza grande."
+};
+
+word: acacia {
+"acacia
+Del lat. acacĭa, y este del gr. ἀκακία akakía.
+1. f. Árbol o arbusto de la familia de las mimosáceas, a veces con espinas, demadera bastante dura, hojas compuestas o divididas en hojuelas, flores olorosasen racimos laxos y colgantes, y fruto en legumbre. De varias de sus especiesfluye espontáneamente la goma arábiga.
+2. f. Madera de la acacia."
+};
+
+word: impávida {
+"impávido, da
+Del lat. impavĭdus.
+1. adj. Libre de pavor, sereno ante el peligro, impertérrito."
+};
+
+word: sarmentosa {
+"sarmiento
+Del lat. sarmentum.
+1. m. Vástago de la vid, largo, delgado, flexible y nudoso, de donde brotan lashojas, las tijeretas y los racimos."
+};
+
+word: silente {
+"silente
+Del lat. silens, -entis, der. de silēre 'guardar silencio'.
+1. adj. Silencioso, tranquilo, sosegado."
+};
+
+ref: Electra {
+"En la mitología griega, Electra (en griego antiguo Ἠλέκτρα Êléktra) era una de las hijas de Agamenón, rey de Micenas, y de su esposa Clitemnestra. Era, por tanto, una Atrida —descendiente del rey Atreo, padre de Agamenón y Menelao. En la tradición que conoce Homero su nombre es Laódice."
+};
+
+ref: Agamenón {
+"Agamenón (en griego antiguo Ἀγαμέμνων Agamémnôn, ‘muy resuelto’, ‘obstinado’) es uno de los más distinguidos héroes de la mitología griega cuyas aventuras se narran en la Ilíada de Homero. Hijo del rey Atreo de Micenas y de la reina Aérope, y hermano de Menelao, debido a la antigüedad de las fuentes no está claro si es un personaje histórico o puramente mítico."
+};
+
+ref: Clytemnestra {
+"En la mitología griega, Clitemnestra o Clitemestra (en griego, Κλυταιμήστρα)1​ fue esposa de Agamenón y reina de Micenas."
+};
+
+ref: Medonte {
+"Medonte, hermanastro de Áyax el Menor e hijo bastardo del rey de Lócrida, Oileo, y de su concubina, la ninfa Rene. Tuvo que desterrarse a Filaca como consecuencia de haber matado a uno de los hermanos de Eriopis, su madrastra, madre de Áyax. Durante la Guerra de Troya, Medonte asumió el mando de las siete naves que Filoctetes había hecho zarpar desde Magnesia cuando el arquero fue recluido en Lemnos debido a la mordedura de una serpiente. Fue muerto por Eneas. (Ilíada, Canto II, verso 727; Canto XV, verso 332)
+Medonte, Un heraldo de Ítaca que era amable con Penélope pese a que todos sus pretendientes eran groseros. Cuando Odiseo mató a todos los pretendientes, perdonó la vida de Medonte.
+Medonte, El primer arconte de Atenas, hijo del rey Codro."
+};
+
+ref: Estrofio {
+"En la mitología griega Orestes (en griego antiguo Ὀρέστης) fue el único hijo varón de Agamenón y Clitemnestra."
+};
+
+ref: Pílades {
+"En la mitología griega, Pílades (en griego antiguo Πυλάδης Pyládês) era el hijo del rey Estrofio de Fócide, conocido principalmente por sus lazos afectivos con Orestes."
+};
+
+ref: Orestes {
+"En la mitología griega Orestes (en griego antiguo Ὀρέστης) fue el único hijo varón de Agamenón y Clitemnestra."
+};
+
+ref: Lobatchesvski {
+"Nikolái Ivánovich Lobachevski (en caracteres cirílicos: Никола́й Ива́нович Лобаче́вский) (1 de diciembre de 1792 - 24 de febrero de 1856) fue un matemático ruso del siglo XIX.
+Entre sus principales logros se encuentra la demostración de varias conjeturas relacionadas con el cálculo tensorial aplicados a vectores en el espacio de Hilbert.
+Fue uno de los primeros matemáticos que aplicó un tratamiento crítico a los postulados fundamentales de la geometría euclidiana."
+};
+
+ref: Riemman {
+"Georg Friedrich Bernhard Riemann (Breselenz, Alemania, 17 de septiembre de 1826 - Verbania, Italia, 20 de julio de 1866) fue un matemático alemán que realizó contribuciones muy importantes al análisis y la geometría diferencial, algunas de las cuales allanaron el camino para el desarrollo más avanzado de la relatividad general. Su nombre está conectado con la función zeta, la hipótesis de Riemann, la integral de Riemann, el lema de Riemann, las variedades de Riemann, las superficies de Riemann y la geometría de Riemann."
+};
+
+word: chuzos {
+"1. m. Palo armado con un pincho de hierro, que se usa para defenderse y atacar.
+2. m. carámbano (‖ pedazo de hielo).
+3. m. Chile y Hond. Barra de hierro cilíndrica y puntiaguda, que se usa para abrirlos suelos.
+4. m. Cuba. Látigo hecho de vergajo o cuero retorcido que va adelgazándosehacia la punta.
+5. m. Ven. Arma blanca rústica que fabrican los presos en la cárcel de maneraclandestina."
+};
+
+ref: "Pere Gimferrer" {
+"Pere Gimferrer Torrens1​ (Barcelona, 22 de junio de 1945) es un poeta, prosista, crítico literario y traductor español. Su obra literaria está compuesta tanto de obras en castellano como en catalán. Fue elegido miembro de la Real Academia Española en 1985. Premio Nacional de las Letras Españolas en 1998."
+};
+
+ref: "Rodrigo Rey Rosa" {
+"Rodrigo Rey Rosa (Ciudad de Guatemala, 4 de noviembre de 1958) es un escritor y traductor guatemalteco, Premio Nacional de Literatura 2004."
+};
+
+ref: "Juan Villoro" {
+"Juan Villoro Ruiz (Ciudad de México, 24 de septiembre de 1956) es un escritor y periodista mexicano. Premio Herralde 2004 por su novela El testigo."
+};
+
+ref: Heidegger {
+"Martin Heidegger (Messkirch, Baden-Wurtemberg, Alemania; 26 de septiembre de 1889 - Friburgo de Brisgovia, Baden-Wurtemberg, Alemania; 26 de mayo de 1976) fue un filósofoalemán, considerado, junto con Edmund Husserl y Ludwig Wittgenstein, como el pensador más influyente del siglo XX y de la filosofía contemporánea[¿según quién?]. Tras sus inicios en la teología católica, desarrolló una filosofía que influyó en campos tan diversos como la teoría literaria, social y política, el arte y la estética, la arquitectura, la antropología cultural, el diseño, el ecologismo, el psicoanálisis y la psicoterapia."
+};
+
+word: latifundio {
+"latifundio
+Del lat. latifundium.
+1. m. Finca rústica de gran extensión."
+};
+
+word: esquilmar {
+"De quima.
+1. tr. Coger el fruto de las haciendas, heredades y ganados.
+2. tr. Dicho de una planta: Chupar con exceso el jugo de la tierra.
+3. tr. Menoscabar, agotar una fuente de riqueza sacando de ella mayor provechoque el debido."
+};
+
+ref: Duchamp {
+"Marcel Duchamp (AFI maʀsɛl dyˈʃɑ̃) (Blainville-Crevon, 28 de julio de 1887 - Neuilly-sur-Seine, 2 de octubre de 1968) fue un artista y ajedrecista francés.
+Especialmente conocido por su actividad artística, su obra ejerció una fuerte influencia en la evolución del movimiento dada en el siglo XX. Al igual que el citado movimiento, abominó la sedimentación simbólica en las obras artísticas como consecuencia del paso del tiempo y exaltó el valor de lo coyuntural, lo fugaz y lo contemporáneo. Duchamp es uno de los principales valedores de la creación artística como resultado de un puro ejercicio de la voluntad, sin necesidad estricta de formación, preparación o talento.1"
+};
+
+ref: "Pierre Cabanne" {"Crítico de arte."};
+
+ref: Heráclito {
+"Heráclito de Éfeso (en griego: Ἡράκλειτος ὁ Ἐφέσιος Herákleitos ho Ephésios), conocido también como El Oscuro de Éfeso,2​ fue un filósofo griego. Nació hacia el año 540  a. C. y falleció hacia el 480 a. C.3​4​5​
+Era natural de Éfeso, ciudad de la Jonia, en la costa occidental del Asia Menor (actual Turquía). Como de los demás filósofos griegos anteriores a Platón, no quedan más que fragmentos de sus obras, y en gran parte se conocen sus aportes gracias a testimonios posteriores."
+};
+
+ref: "Tomás Moro" {
+"Thomas More, también conocido por su nombre castellanizado Tomás Moro, o por su nombre en latín Thomas Morus y venerado por los católicos como santo Tomás Moro1​2​ (Londres, 7 de febrero de 1478-ibidem, 6 de julio de 1535), fue un pensador, teólogo, político, humanista y escritor inglés, que fue además poeta, traductor, lord canciller de Enrique VIII, profesor de leyes, juez de negocios civiles y abogado. Su obra más famosa es Utopía, donde busca relatar la organización de una sociedad ideal, asentada en una nación en forma de isla del mismo nombre. Además, Moro fue un importante detractor de la Reforma protestante y, en especial, de Martín Lutero y de William Tyndale."
+};
+
+ref: Protágoras {
+"Protágoras de Abdera (en griego Πρωταγόρας; Abdera, c. 485 a. C.- c. 411 a. C.)1​ fue un sofista griego. Admirado experto en retórica que recorría el mundo griego cobrando elevadas tarifas por sus conocimientos acerca del correcto uso de las palabras u ortoepía. Platón le acredita como el inventor del papel del sofista profesional o profesor de "virtud" (entendida no como "bondad" sino como conocimiento y habilidad para tener éxito mundano)."
+};
+
+ref: Saint Simon {
+"Claude-Henri de Rouvroy, conde de Saint-Simon (París, 17 de octubre de 1760 – ibíd., 19 de mayo de 1825), fue un filósofo y teórico social francés, que puede incluirse entre los pensadores del socialismo utópico. Sus ideas dieron nacimiento a un movimiento surgido después de su muerte y conocido precisamente con el nombre de sansimonismo.1​ Es también conocido como el padre de la sociología, junto a Auguste Comte.[cita requerida]"
+};
+
+ref: Diderot {
+"Denis Diderot (Langres, 5 de octubre de 17131​-París, 31 de julio de 1784) fue una figura decisiva de la Ilustración como escritor, filósofo y enciclopedista francés.
+Reconocido por su empuje intelectual y su erudición, por su espíritu crítico así como su excepcional genio, marcó hitos en la historia de cada uno de los campos en los que participó: sentó las bases del drama burgués en teatro, revolucionó la novela con Jacques le fataliste o La religiosa y el diálogo con La paradoja del comediante, y, por otra parte, creó la crítica a través de sus salones. En conjunto con Jean-Baptiste le Rond d’Alembert alentó, supervisó la redacción, editó y compiló una de las obras culturales más importantes de la centuria: L'Encyclopédie, obra magna compuesta por 72 000 artículos, de los cuales unos 6000 fueron aportados por el propio Diderot."
+};
+
+ref: "Pedro da Fonseca" {
+"Pedro da Fonseca (Cortiçada, 1528 – Lisboa, 1599) fue un filósofo y teólogo jesuita portugués, conocido en su época como el Aristóteles portugués. Fue catedrático de Filosofía en la Universidad de Coímbra. Fue profesor de griego y árabe y su erudición produjo una serie de ideas en relación con los asuntos desarrollados por Tomás de Aquino y Aristóteles. Sus obras principales versan sobre lógica y metafísica."
+};
+
+ref: "San Anselmo" {
+"San Anselmo de Canterbury O.S.B. (Aosta, 1033-Canterbury, 1109). Se le conoce también como Anselmo de Aosta, por el lugar donde nació, o Anselmo de Bec, si se atiende a la población donde estaba enclavado el monasterio del cual llegó a ser prior. Fue un monje benedictino que fungió como arzobispo de Canterbury durante el periodo 1093-1109. Destacó como teólogo y filósofo escolástico. Doctor de la Iglesia."
+};
+
+ref: Descartes {
+"René Descartes,1​ también llamado Renatus Cartesius (en escritura latina) (La Haye en Touraine, Turena, 31 de marzo de 1596-Estocolmo, Suecia, 11 de febrero de 1650), fue un filósofo, matemático y físico francés, considerado como el padre de la geometría analítica y de la filosofía moderna, así como uno de los epígonos con luz propia en el umbral de la revolución científica.2​"
+};
+
+ref: "Christian von Wolff" {
+"Christian von Wolff, también conocido como Christian Freiherr von Wolff (Breslau, Silesia, 24 de enero de 1679 - Halle, 9 de abril de 1754), fue un filósofo alemán1​ que tuvo una destacada influencia en los presupuestos racionalistas de Kant. No obstante, su racionalismo está más cerca de Descartes que de Leibniz."
+};
+
+ref: Leibniz {
+"Gottfried Wilhelm Leibniz, a veces Gottfried Wilhelm von Leibniz1​ (Leipzig, 1 de julio de 1646-Hannover, 14 de noviembre de 1716), fue un filósofo, matemático, lógico, teólogo, jurista, bibliotecario y político alemán."
+};
+
+ref: Mendelssohn {
+"Felix Mendelssohn (Hamburgo, 3 de febrero de 1809-Leipzig, 4 de noviembre de 1847), cuyo nombre completo era Jakob Ludwig Felix Mendelssohn Bartholdy, fue un compositor, director de orquesta y pianista de música romántica alemán."
+};
+
+ref: Ontologia {
+"Parte de la metafísica que estudia el ser en general y sus propiedades."
+};
+
+ref: "Von Hartmann";
+
+ref: Trendelenburg;
+
+ref: Lange;
+
+ref: Bergson;
+
+ref: Spengler;
+
+ref: Sertillanges;
+
+ref: Kolawski;
+
+ref: Whitehead;
+
+ref: Guyau;
+
+ref: Vatimmo;
+
+ref: Feyerabend;
+
+ref: Spencer;
+
+ref: Vladimir Smirnov;
+
+ref: Mario Bunge;
+
+ref: "Allan Broom";
+
+ref: "Jean-Francois Revel";
+
+ref: "Mijail Suslov";
+
+word: remolón {
+"remolón2, na
+De remorar.
+1. adj. Que intenta evitar el trabajo o la realización de algo. U. t. c. s."
+};
+
+word: ocluir {
+"1. tr. Med. Cerrar un conducto, como un intestino, con algo que lo obstruya, o unaabertura, como la de los párpados, de modo que no se pueda abrir naturalmente."
+};
+
+word: pátina {
+"Del lat. patĭna 'plato', por el barniz de que están revestidos los platos antiguos.
+1. f. Especie de barniz duro, de color aceitunado y reluciente, que por la acción de la humedad se forma en los objetos antiguos de bronce."
+};
+
+word: exigua {"insuficiente, escasa."};
+
+word: impávido {
+"1. adj. Libre de pavor, sereno ante el peligro, impertérrito."
+};
+
+word: invectiva {
+"1. f. Discurso o escrito acre y violento contra alguien o algo."
+};
+
+word: exvoto;
+
+word: campechanía {
+"Que se comporta con llaneza y cordialidad, sin imponer distancia en el trato."
+};
+
+word: quiltro {
+"1. m. y f. Bol. y Chile. Perro y, en particular, el que no es de raza."
+};
+
+word: vianda {
+"1. f. Sustento y comida de los racionales.
+2. f. Comida que se sirve a la mesa.
+3. f. Ant. Frutos y tubérculos comestibles que se sirven guisados, como el ñame, la malanga, el plátano, etc."
+};
+
+word: farallón;
+
+word: orfandad;
+
+word: Raymundo Lulio;
+
+word: truismo;
+
+ref: apoco Della Mirandola;
+
+ref: Husserl;
+
+ref: Eugen Pink;
+
+ref: Merleau-Ponty;
+
+ref: Wittgenstein;
+
+ref: Baudelaire;
+
+word: eugenesia;
+
+word: beligerancia;
+
+word: araucano {
+"4. m. Grupo de lenguas amerindias habladas en Chile y la Argentina, entre las que destacan el mapuche y el ranquel."
+};
+
+ref: "Lonko Kilapán";
+
+ref: Carrera;
+
+ref: Mackenna;
+
+ref: Freire;
+
+ref: "Manuel Rodriguez";
+
+ref: "Bernardo O'Higgins";
+
+word: Epeutufe;
+
+ref: Caronte;
+
+word: abate;
+
+word: "redo a";
+
+word: resollar;
+
+word: factótum;
+
+word: "prisma" {"punto de vista, perspectiva"};
+
+word: mom de plume pseudonimo, nombre de pluma
+
+ref: Pinochet;
+
+ref: Aylwin;
+
+ref: Patricio Lynch;
+
+ref: Cimarosa;
+
+ref: "George Trakl";
+
+ref: Truman Capote;
+
+word: Acoquinar;
+
+ref: "Boris Yeltsin";
+
+word: palmario;
+
+word: acodado;
+
+word: esmirriado {"flaco, extenuado, consumido."};
+
+word: mamotreto;
+
+word: armatoste;
+
+word: pérgola;
+
+word: estólido {"falto de razón y discurso."};
+
+word: "atolladero Atascadero";
+
+word: "azaroso";
+
+word: "patena";
+
+word: pleitesía;
+
+ref: "compendio abreviado de la obra de Voltaire";
+
+ref: "Sucesos de Scottsboro";
+
+ref: "Hugh Thomas, la trata de esclavos";
+
+ref: "Comuna de 1871 en Francia";
+
+word: atildado {"pulcro, elegante"};
+
+word: trovo;
+
+word: prolegomeno;
+
+word: periplo;
+
+word: patíbulo;
+
+word: cirro;
+
+word: emparrado;
+
+word: pugilista {"boxeador"};
+
+word: discordar;
+
+word: mondo o lirondo;
+
+word: muelle;
+
+word: sórdido;
+
+word: azorado;
+
+word: pelero;
+
+word: encomiástico;
+
+word: zootropo;
+
+ref: Paalen;
+
+word: azogue
+
+word: bicoca;
+
+ref: papágo;
+
+word: tumefaccion;
+
+word: abalorio;
+
+word: atolondrado;
+
+ref: cicerón;
+
+word: Lee Giacoca;
+
+word: perorar;
+
+word: amasio querido.
+
+word: timba;
+
+word: infausto;
+
+word: Frotis;
+
+word: guiñapo;
+
+word: bujarrón;
+
+word: lunfardo;
+
+word: deliquio;
+
+word: puntilloso;
+
+word: oblongo;
+
+word: aterido;
+
+word: zarzuela;
+
+word: vicetiple;
+
+word: buhonería;
+
+word: remilgada;
+
+word: abalorio;
+
+word: supina;
+
+word: hierático;
+
+ref: Canetti;
+
+word: rada;
+
+ref: "laminaría digitata";
+
+word: renano;
+
+ref: Chorda Flumm;
+
+ref: Schiller;
+
+ref: Holderlin;
+
+ref: Eichendorff;
+
+ref: Hoffman;
+
+ref: Parsifal by Wolfram Von Eschenbach;
+
+ref: Friedrich Von Hausen;
+
+ref: Walther von der Vogelweide;
+
+word: esteta;
+
+word: húsar;
+
+word: nictálope;
+
+word: retruécano;
+
+word: nimno {
+"nimbar
+1. tr. Rodear de nimbo o aureola una figura o imagen."
+};
+
+word: crápula;
+
+ref: "Flavio Josefo";
+
+ref: Séneca;
+
+ref: "Cantar de Roldán";
+
+word: eremita;
+
+word: isba;
+
+ref: Odoevski;
+
+ref: Lazhéchnikov;
+
+ref: Gorki;
+
+ref: Hegel;
+
+ref: Feuerbach;
+
+ref: Lichtenberg;
+
+ref: Montaigne;
+
+ref: Lermontov;
+
+ref: Pushkin;
+
+ref: Nijinsky;
+
+ref: Gúrov;
+
+ref: Nadson;
+
+ref: Blok;
+
+word: taiga;
+
+ref: Trotsky;
+
+ref Platonov;
+
+ref: "Boris Pilniak";
+
+ref: Chejov;
+
+ref: Gogol;
+
+ref: Doré;
+
+ref: remilgado;
+
+ref: timorato;
+
+ref: supina;
+
+ref: "Kasimir Malévich";
+
+word: detritus;
+
+word: lumpen;
+
+ref: Courbet;
+
+ref: Baudelaire;
+
+ref: Daumier;
+
+ref: Jules Vallès;
+
+ref: Proudhon;
+
+word: "perdiz";
+
+ref: "Ingres";
+
+word: "Delacroix";
+
+ref: "Arcimboldo";
+
+ref: "Makarenko";
+
+word: "procaz" {"desvergonzado, atrevido"};
+
+word: "mohíno" {
+"Del ár. hisp. muhín, y este del ár. clás. mahīn 'ofendido, vilipendiado'.
+1. adj. Triste, melancólico, disgustado."
+};
+
+word: "arenga" {
+"Quizá del occit. arenga, y este del gót. *harihrĭng 'reunión del ejército', de harjis 'ejército' y *hrĭng 'círculo', 'corro de gente'.
+1. f. Discurso pronunciado para enardecer los ánimos de los oyentes. U. t. en sent. fig."
+};
+
+word: "quid" {
+"Del lat. quid 'qué', 'por qué'.
+1. m. Esencia, punto más importante o porqué de una cosa. El quid."
+};
+
+ref: "Judith de Friedrich Hebbel";
+
+word: "irredento";
+
+ref: "Ley de la selva negra";
+
+ref: "Musil";
+
+ref: "Cueva de Alí Babá";
+
+ref: "Lessing y la gramática";
+
+word: "boato";
+
+ref: "Piedra de Sísifo";
+
+word: "ludibrio";
+
+word: "Escarceo";
+
+word: "treno";
+
+word: "epicedio";
+
+word: "Moravia";
+
+word: "súcubo";
+
+word: "trapaza";
+
+word: "vodevil";
+
+ref: "Gluck";
+
+ref: "Eduardo el Confesor";

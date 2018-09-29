@@ -2,12 +2,10 @@ package object
 
 import (
 	"bytes"
-	//"environment/object"
 	"fmt"
 	"hash/fnv"
 	"strings"
 	"wordbuilder/ast"
-	//	"wordbuilder/object"
 )
 
 type ObjectType string

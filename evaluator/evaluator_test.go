@@ -508,7 +508,7 @@ func TestHashLiterals(t *testing.T) {
 }
 
 func TestWordAddition(t *testing.T) {
-	input := `word: bulo {"burla"};
+	input := `word: "bulo" {"burla"};
 	bulo;
 	`
 
@@ -524,7 +524,7 @@ func TestWordAddition(t *testing.T) {
 }
 
 func TestRefAddition(t *testing.T) {
-	input := `ref: a {"b"};
+	input := `ref: "a" {"b"};
 	a;
 	`
 
@@ -540,7 +540,7 @@ func TestRefAddition(t *testing.T) {
 }
 
 func TestConceptAddition(t *testing.T) {
-	input := `cpt: a {"b"};
+	input := `cpt: "a" {"b"};
 	a
 	`
 

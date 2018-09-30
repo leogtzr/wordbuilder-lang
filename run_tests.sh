@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+# set -x
 
 readonly WORK_DIR=$(dirname $(readlink --canonicalize-existing "${0}"))
 

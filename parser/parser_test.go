@@ -285,11 +285,11 @@ func TestWordStatement(t *testing.T) {
 		expectedDefinition string
 		defined            bool
 	}{
-		{"word: bulo;", "bulo", "", false},
-		{"word: calcitrante;", "calcitrante", "", false},
-		{"word: inasequible;", "inasequible", "", false},
-		{`word: bulo {"alv"};`, "bulo", "alv", true},
-		{`word: bulo {"alv2"}`, "bulo", "alv2", true},
+		{`word: "bulo";`, "bulo", "", false},
+		{`word: "calcitrante";`, "calcitrante", "", false},
+		{`word: "inasequible";`, "inasequible", "", false},
+		{`word: "bulo1" {"alv"};`, "bulo1", "alv", true},
+		{`word: "bulo2" {"alv2"}`, "bulo2", "alv2", true},
 	}
 
 	for _, tt := range tests {
@@ -376,11 +376,11 @@ func TestReferenceStatement(t *testing.T) {
 		expectedIdentifier string
 		defined            bool
 	}{
-		{"ref: bulo;", "bulo", false},
-		{"ref: calcitrante;", "calcitrante", false},
-		{"ref: inasequible;", "inasequible", false},
-		{`ref: bulo {"alv"};`, "bulo", true},
-		{`ref: bulo {"alv2"}`, "bulo", true},
+		{`ref: "bulo";`, "bulo", false},
+		{`ref: "calcitrante";`, "calcitrante", false},
+		{`ref: "inasequible";`, "inasequible", false},
+		{`ref: "bulo" {"alv"};`, "bulo", true},
+		{`ref: "bulo" {"alv2"}`, "bulo", true},
 	}
 
 	for _, tt := range tests {
@@ -408,11 +408,11 @@ func TestConceptStatement(t *testing.T) {
 		expectedIdentifier string
 		defined            bool
 	}{
-		{"cpt: bulo;", "bulo", false},
-		{"cpt: calcitrante;", "calcitrante", false},
-		{"cpt: inasequible;", "inasequible", false},
-		{`cpt: bulo {"alv"};`, "bulo", true},
-		{`cpt: bulo {"alv2"}`, "bulo", true},
+		{`cpt: "bulo";`, "bulo", false},
+		{`cpt: "calcitrante";`, "calcitrante", false},
+		{`cpt: "inasequible";`, "inasequible", false},
+		{`cpt: "bulo" {"alv"};`, "bulo", true},
+		{`cpt: "bulo" {"alv2"}`, "bulo", true},
 	}
 
 	for _, tt := range tests {

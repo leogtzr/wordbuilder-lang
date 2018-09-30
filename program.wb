@@ -1,11 +1,11 @@
 let x = 1 + 3;
-word: lala {"lala2"};
+word: "lala" {"lala2"};
 if (defined("lala")) { 
 	puts("OK, found ... "); 
 } else { 
 	puts("it is NOT defined"); 
 }
 
-word: tamal {"suculento"};
+word: "tamal" {"suculento"};
 
 tamal;

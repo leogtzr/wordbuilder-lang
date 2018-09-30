@@ -1513,7 +1513,3 @@ word: "vodevil";
 ref: "Gluck";
 
 ref: "Eduardo el Confesor";
-
-words();
-
-puts(["leo", "alv"]);

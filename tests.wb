@@ -1,0 +1,5 @@
+word: "bulo alv" {"burla"};
+word: "bulo alv" {"burla"};
+ref: "bulo alv2" {"burla"};
+puts("Test: ", wc());
+words();

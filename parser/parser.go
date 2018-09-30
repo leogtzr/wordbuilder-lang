@@ -465,7 +465,7 @@ func (p *Parser) parseWordStatement() *ast.WordStatement {
 	}
 
 	// Expecting an identifier after the :
-	if !p.peekTokenIs(token.IDENT) {
+	if !p.peekTokenIs(token.STRING) {
 		return nil
 	}
 
@@ -576,7 +576,7 @@ func (p *Parser) parseReferenceStatement() *ast.ReferenceStatement {
 	}
 
 	// Expecting an identifier after the :
-	if !p.peekTokenIs(token.IDENT) {
+	if !p.peekTokenIs(token.STRING) {
 		return nil
 	}
 
@@ -617,7 +617,7 @@ func (p *Parser) parseConceptStatement() *ast.ConceptStatement {
 	}
 
 	// Expecting an identifier after the :
-	if !p.peekTokenIs(token.IDENT) {
+	if !p.peekTokenIs(token.STRING) {
 		return nil
 	}
 

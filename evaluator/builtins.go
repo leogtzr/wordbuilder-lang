@@ -135,4 +135,23 @@ var builtins = map[string]*object.Builtin{
 			return NULL
 		},
 	},
+
+	"words": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+			for k, v := range env.Store() {
+				if v == nil {
+					fmt.Printf("%q: \"\"\n", k)
+				} else {
+					fmt.Printf("%q: %q\n", k, v.Inspect())
+				}
+			}
+			return NULL
+		},
+	},
+
+	"wc": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+			return &object.Integer{Value: int64(len(env.Store()))}
+		},
+	},
 }

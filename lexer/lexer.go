@@ -7,6 +7,7 @@ type Lexer struct {
 	position     int  // current position in input (points to current char)
 	readPosition int  // current reading position in input (after current char)
 	ch           byte // current char under examination
+	lineNumber   int
 }
 
 func (l *Lexer) readChar() {
@@ -128,8 +129,17 @@ func isDigit(ch byte) bool {
 }
 
 func (l *Lexer) skipWhitespace() {
-	for l.ch == ' ' || l.ch == '\t' || l.ch == '\n' || l.ch == '\r' {
-		l.readChar()
+whitespaces:
+	for {
+		switch l.ch {
+		case ' ', '\t':
+			l.readChar()
+		case '\n', '\r':
+			l.readChar()
+			l.lineNumber++
+		default:
+			break whitespaces
+		}
 	}
 }
 

@@ -1,4 +1,5 @@
 # wordbuilder-lang
+```
 
 word: "arenga" {"
 Quizá del occit. arenga, y este del gót. *harihrĭng 'reunión del ejército', de harjis 'ejército' y *hrĭng 'círculo', 'corro de gente'.
@@ -32,7 +33,7 @@ word: "Escarceo";
 
 word: "treno";
 
-word: "epicedio";
+word: "epicedio";	
 
 word: "Moravia";
 
@@ -55,3 +56,5 @@ if (defined("boato") == false) {
 something
 "};
 }
+
+```

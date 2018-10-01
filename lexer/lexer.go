@@ -26,6 +26,10 @@ func New(input string) *Lexer {
 	return l
 }
 
+func (l *Lexer) CurrentLine() int {
+	return l.lineNumber
+}
+
 func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
 

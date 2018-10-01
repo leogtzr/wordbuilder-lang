@@ -55,13 +55,22 @@ func (p *Parser) curPrecedence() int {
 	return LOWEST
 }
 
+type Error struct {
+	Error      string
+	LineNumber int
+}
+
+func (err *Error) String() string {
+	return fmt.Sprintf("Line %d:%s", err.LineNumber, err.Error)
+}
+
 // Parser ...
 type Parser struct {
 	l *lexer.Lexer
 
 	curToken  token.Token
 	peekToken token.Token
-	errors    []string
+	errors    []Error
 
 	prefixParseFns map[token.TokenType]prefixParseFn
 	infixParseFns  map[token.TokenType]infixParseFn
@@ -79,7 +88,7 @@ func (p *Parser) registerInfix(tokenType token.TokenType, fn infixParseFn) {
 func New(l *lexer.Lexer) *Parser {
 	p := &Parser{
 		l:      l,
-		errors: []string{},
+		errors: []Error{},
 	}
 
 	p.prefixParseFns = make(map[token.TokenType]prefixParseFn)
@@ -368,14 +377,14 @@ func (p *Parser) parsePrefixExpression() ast.Expression {
 }
 
 // Errors ...
-func (p *Parser) Errors() []string {
+func (p *Parser) Errors() []Error {
 	return p.errors
 }
 
 func (p *Parser) peekError(t token.TokenType) {
 	msg := fmt.Sprintf("expected next token to be %s, got %s instead",
 		t, p.peekToken.Type)
-	p.errors = append(p.errors, msg)
+	p.errors = append(p.errors, Error{Error: msg, LineNumber: p.l.CurrentLine()})
 }
 
 func (p *Parser) nextToken() {
@@ -709,7 +718,7 @@ func (p *Parser) parseIntegerLiteral() ast.Expression {
 	value, err := strconv.ParseInt(p.curToken.Literal, 0, 64)
 	if err != nil {
 		msg := fmt.Sprintf("could not parse %q as Integer", p.curToken.Literal)
-		p.errors = append(p.errors, msg)
+		p.errors = append(p.errors, Error{Error: msg, LineNumber: p.l.CurrentLine()})
 		return nil
 	}
 	lit.Value = value
@@ -718,7 +727,7 @@ func (p *Parser) parseIntegerLiteral() ast.Expression {
 
 func (p *Parser) noPrefixParseFnError(t token.TokenType) {
 	msg := fmt.Sprintf("no prefix parse function for %s found", t)
-	p.errors = append(p.errors, msg)
+	p.errors = append(p.errors, Error{Error: msg, LineNumber: p.l.CurrentLine()})
 }
 
 func (p *Parser) parseExpression(precedence int) ast.Expression {

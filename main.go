@@ -16,7 +16,7 @@ func main() {
 
 	args := os.Args
 	if len(args) <= 1 {
-		log.Fatal("Wrong number of arguments ... ")
+		log.Fatal("wrong number of arguments ... ")
 	}
 
 	fileArg := os.Args[1]
@@ -52,8 +52,8 @@ func main() {
 	}
 }
 
-func printParseErrors(out io.Writer, errors []string) {
+func printParseErrors(out io.Writer, errors []parser.Error) {
 	for _, msg := range errors {
-		io.WriteString(out, "\t"+msg+"\n")
+		io.WriteString(out, "\t"+msg.String()+"\n")
 	}
 }

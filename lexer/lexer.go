@@ -21,7 +21,7 @@ func (l *Lexer) readChar() {
 }
 
 func New(input string) *Lexer {
-	l := &Lexer{input: input}
+	l := &Lexer{input: input, lineNumber: 1}
 	l.readChar()
 	return l
 }

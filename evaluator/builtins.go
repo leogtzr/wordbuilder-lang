@@ -136,7 +136,7 @@ var builtins = map[string]*object.Builtin{
 		},
 	},
 
-	"words": &object.Builtin{
+	"printwords": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
 			for k, v := range env.Store() {
 				if v == nil {

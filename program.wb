@@ -44,7 +44,7 @@ ref: "Gluck";
 
 ref: "Eduardo el Confesor";
 
-words();
+printwords();
 
 puts(["leo", "alv"]);
 

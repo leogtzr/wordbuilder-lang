@@ -17,6 +17,14 @@ type Environment struct {
 	outer    *Environment
 }
 
+func (e *Environment) Thoughts() []string {
+	return e.thoughts
+}
+
+func (e *Environment) AddThought(thought string) {
+	e.thoughts = append(e.thoughts, thought)
+}
+
 func (e *Environment) Get(name string) (Object, bool) {
 	obj, ok := e.store[name]
 	if !ok && e.outer != nil {

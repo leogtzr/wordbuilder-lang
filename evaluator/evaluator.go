@@ -168,6 +168,17 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 
 		return obj
 
+	case *ast.MeThoughtStatement:
+		val := Eval(node.Value, env)
+		if isError(val) {
+			return val
+		}
+
+		obj := &object.MeThought{Thought: node.Content}
+		env.AddThought(node.Content)
+
+		return obj
+
 	case *ast.ConceptStatement:
 		val := Eval(node.Value, env)
 		if isError(val) {

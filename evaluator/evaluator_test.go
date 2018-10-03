@@ -569,9 +569,18 @@ func TestConceptAddition(t *testing.T) {
 }
 
 func TestMeThoughtAddition(t *testing.T) {
-	input := `me: {"pensamiento"};
-	`
-	testEval(input)
+	input := `me: {"pensamiento"};`
+	// testEval(input)
+	l := lexer.New(input)
+	p := parser.New(l)
+	program := p.ParseProgram()
+	env := object.NewEnvironment()
+	Eval(program, env)
+
+	if len(env.Thoughts()) < 1 {
+		t.Fatal("thoughts are empty ... ")
+	}
+
 }
 
 func TestTranslationAddition(t *testing.T) {

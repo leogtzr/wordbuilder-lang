@@ -121,6 +121,7 @@ func (ts *TranslationStatement) String() string {
 // MeThoughtStatement ...
 type MeThoughtStatement struct {
 	Content string
+	Value   Expression
 }
 
 func (ms *MeThoughtStatement) statementNode()       {}

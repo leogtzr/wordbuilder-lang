@@ -2,7 +2,7 @@ package object
 
 func NewEnvironment() *Environment {
 	s := make(map[string]Object)
-	return &Environment{store: s}
+	return &Environment{store: s, thoughts: []string{}}
 }
 
 func NewEnclosedEnvironment(outer *Environment) *Environment {
@@ -12,8 +12,9 @@ func NewEnclosedEnvironment(outer *Environment) *Environment {
 }
 
 type Environment struct {
-	store map[string]Object
-	outer *Environment
+	store    map[string]Object
+	thoughts []string
+	outer    *Environment
 }
 
 func (e *Environment) Get(name string) (Object, bool) {

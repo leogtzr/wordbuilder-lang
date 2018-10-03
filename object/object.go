@@ -25,6 +25,7 @@ const (
 	REFERENCE_OBJ    = "REF"
 	CONCEPT_OBJ      = "CPT"
 	TRANSLATION_OBJ  = "TR"
+	ME_THOUGHT_OBJ   = "ME"
 )
 
 type Object interface {
@@ -274,4 +275,16 @@ func (tr *Translation) Type() ObjectType {
 
 func (tr *Translation) Inspect() string {
 	return fmt.Sprintf("%s->{%s}", tr.Translation, tr.Definition)
+}
+
+type MeThought struct {
+	Thought string
+}
+
+func (me *MeThought) Type() ObjectType {
+	return ME_THOUGHT_OBJ
+}
+
+func (me *MeThought) Inspect() string {
+	return fmt.Sprintf("'%s'", me.Thought)
 }

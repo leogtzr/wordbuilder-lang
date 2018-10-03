@@ -1,5 +1,5 @@
 # wordbuilder-lang
-```
+```ruby
 word: "arenga" {"
 Quizá del occit. arenga, y este del gót. *harihrĭng 'reunión del ejército', de harjis 'ejército' y *hrĭng 'círculo', 'corro de gente'.
 1. f. Discurso pronunciado para enardecer los ánimos de los oyentes. U. t. en sent. fig.

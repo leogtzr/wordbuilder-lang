@@ -59,3 +59,12 @@ boato;
 puts(wordcount());
 puts(refcount());
 puts(trcount());
+
+puts(max(1, 2) + 7);
+puts([3, 4][0]);
+
+me: {
+	"holis"
+};
+
+thoughts();

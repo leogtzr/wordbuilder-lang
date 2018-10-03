@@ -537,7 +537,7 @@ func TestRefAddition(t *testing.T) {
 
 	ref, ok := evaluated.(*object.Reference)
 	if !ok {
-		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
+		t.Fatalf("object is not Reference. got=%T (%+v)", evaluated, evaluated)
 	}
 	if ref.Ref != "a" {
 		t.Fatalf("object is not '%s', got '%s'", "a", ref.Ref)
@@ -557,7 +557,7 @@ func TestConceptAddition(t *testing.T) {
 
 	cpt, ok := evaluated.(*object.Concept)
 	if !ok {
-		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
+		t.Fatalf("object is not Concept. got=%T (%+v)", evaluated, evaluated)
 	}
 	if cpt.Concept != "a" {
 		t.Fatalf("object is not '%s', got '%s'", "a", cpt.Concept)
@@ -570,7 +570,6 @@ func TestConceptAddition(t *testing.T) {
 
 func TestMeThoughtAddition(t *testing.T) {
 	input := `me: {"pensamiento"};`
-	// testEval(input)
 	l := lexer.New(input)
 	p := parser.New(l)
 	program := p.ParseProgram()
@@ -579,6 +578,52 @@ func TestMeThoughtAddition(t *testing.T) {
 
 	if len(env.Thoughts()) < 1 {
 		t.Fatal("thoughts are empty ... ")
+	}
+
+	thought := env.Thoughts()[0]
+	if thought != "pensamiento" {
+		t.Errorf("thought wrong, got='%s', expected: '%s'", thought, "pensamiento")
+	}
+
+}
+
+func TestThoughtsFunctionWithExpression(t *testing.T) {
+	input := `
+	me: {"pensamiento"};
+	let x = thoughts()[0];
+	x
+	`
+
+	evaluated := testEval(input)
+
+	str, ok := evaluated.(*object.String)
+	if !ok {
+		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
+	}
+
+	if str.Value != "pensamiento" {
+		t.Fatalf("object is not '%s', got '%s'", "pensamiento", str.Value)
+	}
+
+}
+
+func TestThoughtsFunctionWithLengthExpression(t *testing.T) {
+	input := `
+	me: {"pensamiento"};
+	let x = len(thoughts());
+	x
+	`
+
+	evaluated := testEval(input)
+
+	integerLiteral, ok := evaluated.(*object.Integer)
+
+	if !ok {
+		t.Fatalf("object is not Integer. got=%T (%+v)", evaluated, evaluated)
+	}
+
+	if integerLiteral.Value != 1 {
+		t.Fatalf("expected: %d, got=%d", 1, integerLiteral.Value)
 	}
 
 }
@@ -592,7 +637,7 @@ func TestTranslationAddition(t *testing.T) {
 
 	tr, ok := evaluated.(*object.Translation)
 	if !ok {
-		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
+		t.Fatalf("object is not Translation. got=%T (%+v)", evaluated, evaluated)
 	}
 	if tr.Translation != "snore" {
 		t.Fatalf("object is not '%s', got '%s'", "snore", tr.Translation)

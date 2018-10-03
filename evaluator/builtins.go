@@ -76,6 +76,7 @@ var builtins = map[string]*object.Builtin{
 			return NULL
 		},
 	},
+
 	"last": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
 			if len(args) != 1 || args[0].Type() != object.ARRAY_OBJ {
@@ -91,6 +92,7 @@ var builtins = map[string]*object.Builtin{
 			return NULL
 		},
 	},
+
 	"rest": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
 			if len(args) != 1 || args[0].Type() != object.ARRAY_OBJ {
@@ -200,6 +202,28 @@ var builtins = map[string]*object.Builtin{
 				}
 			}
 			return &object.Integer{Value: int64(c)}
+		},
+	},
+
+	"mecount": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+			c := 0
+			for _, v := range env.Store() {
+				if _, ok := v.(*object.MeThought); ok {
+					c++
+				}
+			}
+			return &object.Integer{Value: int64(c)}
+		},
+	},
+
+	"thoughts": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+			elements := []object.Object{}
+			for _, th := range env.Thoughts() {
+				elements = append(elements, &object.String{Value: th})
+			}
+			return &object.Array{Elements: elements}
 		},
 	},
 }

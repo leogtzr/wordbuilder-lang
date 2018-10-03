@@ -154,4 +154,52 @@ var builtins = map[string]*object.Builtin{
 			return &object.Integer{Value: int64(len(env.Store()))}
 		},
 	},
+
+	"wordcount": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+			c := 0
+			for _, v := range env.Store() {
+				if _, ok := v.(*object.Word); ok {
+					c++
+				}
+			}
+			return &object.Integer{Value: int64(c)}
+		},
+	},
+
+	"refcount": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+			c := 0
+			for _, v := range env.Store() {
+				if _, ok := v.(*object.Reference); ok {
+					c++
+				}
+			}
+			return &object.Integer{Value: int64(c)}
+		},
+	},
+
+	"trcount": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+			c := 0
+			for _, v := range env.Store() {
+				if _, ok := v.(*object.Translation); ok {
+					c++
+				}
+			}
+			return &object.Integer{Value: int64(c)}
+		},
+	},
+
+	"cptcount": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+			c := 0
+			for _, v := range env.Store() {
+				if _, ok := v.(*object.Concept); ok {
+					c++
+				}
+			}
+			return &object.Integer{Value: int64(c)}
+		},
+	},
 }

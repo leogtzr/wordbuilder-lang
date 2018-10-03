@@ -514,12 +514,17 @@ func TestWordAddition(t *testing.T) {
 
 	evaluated := testEval(input)
 
-	str, ok := evaluated.(*object.String)
+	w, ok := evaluated.(*object.Word)
 	if !ok {
 		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
 	}
-	if str.Value != "burla" {
-		t.Fatalf("object is not '%s', got '%s'", "burla", str.Value)
+
+	if w.Word != "bulo" {
+		t.Fatalf("object is not '%s', got '%s'", "bulo", w.Word)
+	}
+
+	if w.Definition != "burla" {
+		t.Fatalf("object is not '%s', got '%s'", "burla", w.Word)
 	}
 }
 
@@ -530,12 +535,16 @@ func TestRefAddition(t *testing.T) {
 
 	evaluated := testEval(input)
 
-	str, ok := evaluated.(*object.String)
+	ref, ok := evaluated.(*object.Reference)
 	if !ok {
 		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
 	}
-	if str.Value != "b" {
-		t.Fatalf("object is not '%s', got '%s'", "b", str.Value)
+	if ref.Ref != "a" {
+		t.Fatalf("object is not '%s', got '%s'", "a", ref.Ref)
+	}
+
+	if ref.Definition != "b" {
+		t.Fatalf("object is not '%s', got '%s'", "b", ref.Definition)
 	}
 }
 
@@ -546,13 +555,23 @@ func TestConceptAddition(t *testing.T) {
 
 	evaluated := testEval(input)
 
-	str, ok := evaluated.(*object.String)
+	cpt, ok := evaluated.(*object.Concept)
 	if !ok {
 		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
 	}
-	if str.Value != "b" {
-		t.Fatalf("object is not '%s', got '%s'", "b", str.Value)
+	if cpt.Concept != "a" {
+		t.Fatalf("object is not '%s', got '%s'", "a", cpt.Concept)
 	}
+
+	if cpt.Definition != "b" {
+		t.Fatalf("object is not '%s', got '%s'", "b", cpt.Concept)
+	}
+}
+
+func TestMeThoughtAddition(t *testing.T) {
+	input := `me: {"pensamiento"};
+	`
+	testEval(input)
 }
 
 func TestTranslationAddition(t *testing.T) {
@@ -562,12 +581,16 @@ func TestTranslationAddition(t *testing.T) {
 
 	evaluated := testEval(input)
 
-	str, ok := evaluated.(*object.String)
+	tr, ok := evaluated.(*object.Translation)
 	if !ok {
 		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
 	}
-	if str.Value != "ronquido" {
-		t.Fatalf("object is not '%s', got '%s'", "ronquido", str.Value)
+	if tr.Translation != "snore" {
+		t.Fatalf("object is not '%s', got '%s'", "snore", tr.Translation)
+	}
+
+	if tr.Definition != "ronquido" {
+		t.Fatalf("object is not '%s', got '%s'", "ronquido", tr.Definition)
 	}
 }
 

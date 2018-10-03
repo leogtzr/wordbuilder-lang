@@ -24,6 +24,7 @@ const (
 	WORD_OBJ         = "WORD"
 	REFERENCE_OBJ    = "REF"
 	CONCEPT_OBJ      = "CPT"
+	TRANSLATION_OBJ  = "TR"
 )
 
 type Object interface {
@@ -224,8 +225,8 @@ func (h *Hash) Type() ObjectType {
 }
 
 type Word struct {
-	word       string
-	definition string
+	Word       string
+	Definition string
 }
 
 func (w *Word) Type() ObjectType {
@@ -233,5 +234,44 @@ func (w *Word) Type() ObjectType {
 }
 
 func (w *Word) Inspect() string {
-	return fmt.Sprintf("%s->{%s}", w.word, w.definition)
+	return fmt.Sprintf("%s->{%s}", w.Word, w.Definition)
+}
+
+type Reference struct {
+	Ref        string
+	Definition string
+}
+
+func (ref *Reference) Type() ObjectType {
+	return REFERENCE_OBJ
+}
+
+func (ref *Reference) Inspect() string {
+	return fmt.Sprintf("%s->{%s}", ref.Ref, ref.Definition)
+}
+
+type Concept struct {
+	Concept    string
+	Definition string
+}
+
+func (cpt *Concept) Type() ObjectType {
+	return CONCEPT_OBJ
+}
+
+func (cpt *Concept) Inspect() string {
+	return fmt.Sprintf("%s->{%s}", cpt.Concept, cpt.Definition)
+}
+
+type Translation struct {
+	Translation string
+	Definition  string
+}
+
+func (tr *Translation) Type() ObjectType {
+	return TRANSLATION_OBJ
+}
+
+func (tr *Translation) Inspect() string {
+	return fmt.Sprintf("%s->{%s}", tr.Translation, tr.Definition)
 }

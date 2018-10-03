@@ -8,7 +8,7 @@ Del lat. quid 'qué', 'por qué'.
 1. m. Esencia, punto más importante o porqué de una cosa. El quid.
 "};
 
-ref: "Judith de Friedrich Hebbel";
+ref: "Judith de Friedrich Hebbel" {"test"};
 
 word: "irredento";
 
@@ -55,3 +55,7 @@ something
 }
 
 boato;
+
+puts(wordcount());
+puts(refcount());
+puts(trcount());

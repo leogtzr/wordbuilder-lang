@@ -121,28 +121,69 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 		if isError(val) {
 			return val
 		}
-		env.Set(node.Name.Value, val)
+		obj := &object.Reference{Ref: node.Name.Value}
+
+		if val == nil {
+			obj.Definition = ""
+		} else {
+			obj.Definition = val.Inspect()
+		}
+
+		env.Set(node.Name.Value, obj)
+
+		return obj
 
 	case *ast.TranslationStatement:
 		val := Eval(node.Value, env)
 		if isError(val) {
 			return val
 		}
-		env.Set(node.Name.Value, val)
+		obj := &object.Translation{Translation: node.Name.Value}
+
+		if val == nil {
+			obj.Definition = ""
+		} else {
+			obj.Definition = val.Inspect()
+		}
+
+		env.Set(node.Name.Value, obj)
+
+		return obj
 
 	case *ast.WordStatement:
 		val := Eval(node.Value, env)
 		if isError(val) {
 			return val
 		}
-		env.Set(node.Name.Value, val)
+
+		obj := &object.Word{Word: node.Name.Value}
+
+		if val == nil {
+			obj.Definition = ""
+		} else {
+			obj.Definition = val.Inspect()
+		}
+
+		env.Set(node.Name.Value, obj)
+
+		return obj
 
 	case *ast.ConceptStatement:
 		val := Eval(node.Value, env)
 		if isError(val) {
 			return val
 		}
-		env.Set(node.Name.Value, val)
+		obj := &object.Concept{Concept: node.Name.Value}
+
+		if val == nil {
+			obj.Definition = ""
+		} else {
+			obj.Definition = val.Inspect()
+		}
+
+		env.Set(node.Name.Value, obj)
+
+		return obj
 	}
 	return nil
 }

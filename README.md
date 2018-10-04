@@ -57,6 +57,7 @@ me: {
 	"I think what the author tried to say is ..."
 };
 
-thoughts();
+let x = thoughts()[0];
+puts(x);
 
 ```

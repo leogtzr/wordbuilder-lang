@@ -27,8 +27,6 @@ func main() {
 
 	defer programFile.Close()
 
-	out := os.Stdout
-
 	programContent, _ := ioutil.ReadAll(programFile)
 
 	l := lexer.New(string(programContent))
@@ -38,14 +36,14 @@ func main() {
 	program := p.ParseProgram()
 
 	if len(p.Errors()) != 0 {
-		printParseErrors(out, p.Errors())
+		printParseErrors(os.Stdout, p.Errors())
 		os.Exit(1)
 	}
 
 	evaluated := evaluator.Eval(program, env)
 	if evaluated != nil {
-		io.WriteString(out, evaluated.Inspect())
-		io.WriteString(out, "\n")
+		io.WriteString(os.Stdout, evaluated.Inspect())
+		io.WriteString(os.Stdout, "\n")
 	}
 }
 

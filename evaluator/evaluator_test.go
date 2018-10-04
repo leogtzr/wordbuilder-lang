@@ -362,7 +362,7 @@ func TestBuiltinFunctions(t *testing.T) {
 		{`len("hello world")`, 11},
 		{`max(3, 5, 2)`, 5},
 		{`max(2)`, 2},
-		{`defined("alv")`, false},
+		{`exists("alv")`, false},
 		{`len(1)`, "argument to `len` not supported, got INTEGER"},
 		{`len("one", "two")`, "wrong number of arguments. got=2, want=1"},
 	}

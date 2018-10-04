@@ -27,7 +27,7 @@ printwords();
 
 puts(["leo", "alv"]);
 
-if (defined("boato") == true) {
+if (exists("boato") == true) {
 	word: "boato" {"
 something
 "};

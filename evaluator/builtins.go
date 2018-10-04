@@ -48,7 +48,7 @@ var builtins = map[string]*object.Builtin{
 		},
 	},
 
-	"defined": &object.Builtin{
+	"exists": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
 
 			if len(args) != 1 || args[0].Type() != object.StringObj {

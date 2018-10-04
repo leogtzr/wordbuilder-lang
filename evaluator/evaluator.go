@@ -14,7 +14,7 @@ var (
 
 func isError(obj object.Object) bool {
 	if obj != nil {
-		return obj.Type() == object.ERROR_OBJ
+		return obj.Type() == object.ErrorObj
 	}
 	return false
 }
@@ -227,9 +227,9 @@ func evalHashLiteral(node *ast.HashLiteral, env *object.Environment) object.Obje
 
 func evalIndexExpression(left, index object.Object) object.Object {
 	switch {
-	case left.Type() == object.ARRAY_OBJ && index.Type() == object.INTEGER_OBJ:
+	case left.Type() == object.ArrayObj && index.Type() == object.IntegerObj:
 		return evalArrayIndexExpression(left, index)
-	case left.Type() == object.HASH_OBJ:
+	case left.Type() == object.HashObj:
 		return evalHashIndexExpression(left, index)
 	default:
 		return newError("index operator not supported: %s", left.Type())
@@ -357,10 +357,10 @@ func isTruthy(obj object.Object) bool {
 
 func evalInfixExpression(operator string, left, right object.Object) object.Object {
 	switch {
-	case left.Type() == object.INTEGER_OBJ && right.Type() == object.INTEGER_OBJ:
+	case left.Type() == object.IntegerObj && right.Type() == object.IntegerObj:
 		return evalIntegerInfixExpression(operator, left, right)
 
-	case left.Type() == object.STRING_OBJ && right.Type() == object.STRING_OBJ:
+	case left.Type() == object.StringObj && right.Type() == object.StringObj:
 		return evalStringInfixExpression(operator, left, right)
 	case operator == "==":
 		return nativeBoolToBooleanIObject(left == right)
@@ -427,7 +427,7 @@ func evalPrefixExpression(operator string, right object.Object) object.Object {
 }
 
 func evalMinusPrefixOperatorExpression(right object.Object) object.Object {
-	if right.Type() != object.INTEGER_OBJ {
+	if right.Type() != object.IntegerObj {
 		return newError("unknown operator: -%s", right.Type())
 	}
 
@@ -451,9 +451,8 @@ func evalBangOperator(right object.Object) object.Object {
 func nativeBoolToBooleanIObject(input bool) *object.Boolean {
 	if input {
 		return TRUE
-	} else {
-		return FALSE
 	}
+	return FALSE
 }
 
 func evalProgram(program *ast.Program, env *object.Environment) object.Object {
@@ -481,7 +480,7 @@ func evalBlockStatement(block *ast.BlockStatement, env *object.Environment) obje
 		result = Eval(statement, env)
 		if result != nil {
 			rt := result.Type()
-			if rt == object.RETURN_VALUE_OBJ || rt == object.ERROR_OBJ {
+			if rt == object.ReturnValueObj || rt == object.ErrorObj {
 				return result
 			}
 		}

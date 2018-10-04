@@ -3,6 +3,7 @@ package parser
 import (
 	"testing"
 	"wordbuilder/lexer"
+
 	//"wordbuilder/parser"
 	//"wordbuilder/parser"
 	"wordbuilder/ast"
@@ -13,13 +14,13 @@ func TestString(t *testing.T) {
 	program := &ast.Program{
 		Statements: []ast.Statement{
 			&ast.LetStatement{
-				Token: token.Token{Type: token.LET, Literal: "let"},
+				Token: token.Token{Type: token.Let, Literal: "let"},
 				Name: &ast.Identifier{
-					Token: token.Token{Type: token.IDENT, Literal: "myVar"},
+					Token: token.Token{Type: token.Ident, Literal: "myVar"},
 					Value: "myVar",
 				},
 				Value: &ast.Identifier{
-					Token: token.Token{Type: token.IDENT, Literal: "anotherVar"},
+					Token: token.Token{Type: token.Ident, Literal: "anotherVar"},
 					Value: "anotherVar",
 				},
 			},

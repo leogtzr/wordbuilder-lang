@@ -52,7 +52,8 @@ puts(max(1, 2) + 7);
 puts([3, 4][0]);
 
 me: {
-	"holis"
+	"I think what the author tried to say is ..."
 };
 
-thoughts();
+let x = thoughts()[0];
+puts(x);

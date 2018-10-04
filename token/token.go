@@ -1,86 +1,87 @@
 package token
 
-type TokenType string
+type Type string
 
 type Token struct {
-	Type    TokenType
+	Type    Type
 	Literal string
 }
 
 const (
-	STRING = "STRING"
-	COLON  = ":"
+	String = "STRING"
+	Colon  = ":"
 
-	ILLEGAL = "ILLEGAL"
+	Illegal = "ILLEGAL"
 	EOF     = "EOF"
 
-	// Identifiers + literals
-	IDENT = "IDENT" // add, foobar, x, y, ...
-	INT   = "INT"   // 1343456
+	// Ident Identifiers + literals
+	Ident = "IDENT" // add, foobar, x, y, ...
+	Int   = "INT"   // 1343456
 
-	// Operators
-	ASSIGN = "="
-	PLUS   = "+"
+	// Assign ... Operators
+	Assign = "="
+	Plus   = "+"
 
-	// Delimiters
-	COMMA     = ","
-	SEMICOLON = ";"
+	// Comma ...
+	Comma     = ","
+	Semicolon = ";"
 
-	LPAREN = "("
-	RPAREN = ")"
-	LBRACE = "{"
-	RBRACE = "}"
+	LeftParen  = "("
+	RightParen = ")"
+	LeftBrace  = "{"
+	RightBrace = "}"
 
 	// Keywords
-	FUNCTION = "FUNCTION"
-	LET      = "LET"
+	Function = "FUNCTION"
+	Let      = "LET"
 
-	WORD = "WORD"
-	REF  = "REF"
-	CPT  = "CPT"
-	TR   = "TR"
-	ME   = "ME"
+	Word = "WORD"
+	Ref  = "REF"
+	Cpt  = "CPT"
+	Tr   = "TR"
+	Me   = "ME"
 
-	TRUE   = "TRUE"
-	FALSE  = "FALSE"
-	IF     = "IF"
-	ELSE   = "ELSE"
-	RETURN = "RETURN"
+	True   = "TRUE"
+	False  = "FALSE"
+	If     = "IF"
+	Else   = "ELSE"
+	Return = "RETURN"
 
 	// Operators
-	MINUS    = "-"
-	BANG     = "!"
-	ASTERISK = "*"
-	SLASH    = "/"
+	// MINUS ...
+	Minus    = "-"
+	Bang     = "!"
+	Asterisk = "*"
+	Slash    = "/"
 
-	LT = "<"
-	GT = ">"
+	Lt = "<"
+	Gt = ">"
 
-	EQ     = "=="
-	NOT_EQ = "!="
+	Eq    = "=="
+	NotEq = "!="
 
-	LBRACKET = "["
-	RBRACKET = "]"
+	LeftBracket  = "["
+	RightBracket = "]"
 )
 
-var keywords = map[string]TokenType{
-	"fn":     FUNCTION,
-	"let":    LET,
-	"true":   TRUE,
-	"false":  FALSE,
-	"if":     IF,
-	"else":   ELSE,
-	"return": RETURN,
-	"word":   WORD,
-	"ref":    REF,
-	"cpt":    CPT,
-	"tr":     TR,
-	"me":     ME,
+var keywords = map[string]Type{
+	"fn":     Function,
+	"let":    Let,
+	"true":   True,
+	"false":  False,
+	"if":     If,
+	"else":   Else,
+	"return": Return,
+	"word":   Word,
+	"ref":    Ref,
+	"cpt":    Cpt,
+	"tr":     Tr,
+	"me":     Me,
 }
 
-func LookupIdent(ident string) TokenType {
+func LookupIdent(ident string) Type {
 	if tok, ok := keywords[ident]; ok {
 		return tok
 	}
-	return IDENT
+	return Ident
 }

@@ -51,7 +51,7 @@ var builtins = map[string]*object.Builtin{
 	"defined": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
 
-			if len(args) != 1 || args[0].Type() != object.STRING_OBJ {
+			if len(args) != 1 || args[0].Type() != object.StringObj {
 				return newError("argument to `first` must be STRING, got %s", args[0].Type())
 			}
 
@@ -63,7 +63,7 @@ var builtins = map[string]*object.Builtin{
 
 	"first": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
-			if len(args) != 1 || args[0].Type() != object.ARRAY_OBJ {
+			if len(args) != 1 || args[0].Type() != object.ArrayObj {
 				return newError("argument to `first` must be ARRAY, got %s",
 					args[0].Type())
 			}
@@ -79,7 +79,7 @@ var builtins = map[string]*object.Builtin{
 
 	"last": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
-			if len(args) != 1 || args[0].Type() != object.ARRAY_OBJ {
+			if len(args) != 1 || args[0].Type() != object.ArrayObj {
 				return newError("argument to `last` must be ARRAY, got %s",
 					args[0].Type())
 			}
@@ -95,7 +95,7 @@ var builtins = map[string]*object.Builtin{
 
 	"rest": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
-			if len(args) != 1 || args[0].Type() != object.ARRAY_OBJ {
+			if len(args) != 1 || args[0].Type() != object.ArrayObj {
 				return newError("argument to `rest` must be ARRAY, got %s",
 					args[0].Type())
 			}
@@ -113,7 +113,7 @@ var builtins = map[string]*object.Builtin{
 	},
 	"push": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
-			if len(args) != 2 && args[0].Type() != object.ARRAY_OBJ {
+			if len(args) != 2 && args[0].Type() != object.ArrayObj {
 				return newError("argument to `push` must be ARRAY, got %s",
 					args[0].Type())
 			}

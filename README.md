@@ -11,27 +11,16 @@ Del lat. quid 'qué', 'por qué'.
 "};
 
 ref: "Judith de Friedrich Hebbel" {"test"};
-
 word: "irredento";
-
 ref: "Musil";
-
 ref: "Cueva de Alí Babá";
-
 ref: "Lessing y la gramática";
-
 word: "boato";
-
 ref: "Piedra de Sísifo";
-
 word: "epicedio";
-
 word: "Moravia";
-
 word: "súcubo";
-
 word: "vodevil";
-
 ref: "Eduardo el Confesor";
 
 printwords();

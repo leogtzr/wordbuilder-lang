@@ -553,7 +553,6 @@ func (p *Parser) parseWordStatement() *ast.WordStatement {
 		p.nextToken()
 	}
 
-	fmt.Println("About to return this ... ")
 	return stmt
 }
 

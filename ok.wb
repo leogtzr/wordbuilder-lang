@@ -1,6 +1,0 @@
-if (true == true) {
-	word: "alv";
-	if (false == false) {
-		puts("Ok ... it works");
-	}
-}

@@ -35,11 +35,12 @@ const (
 	Function = "FUNCTION"
 	Let      = "LET"
 
-	Word = "WORD"
-	Ref  = "REF"
-	Cpt  = "CPT"
-	Tr   = "TR"
-	Me   = "ME"
+	Word  = "WORD"
+	Ref   = "REF"
+	Cpt   = "CPT"
+	Tr    = "TR"
+	Me    = "ME"
+	Quote = "QUOTE"
 
 	True   = "TRUE"
 	False  = "FALSE"
@@ -77,6 +78,7 @@ var keywords = map[string]Type{
 	"cpt":    Cpt,
 	"tr":     Tr,
 	"me":     Me,
+	"quote":  Quote,
 }
 
 func LookupIdent(ident string) Type {

@@ -249,4 +249,62 @@ var builtins = map[string]*object.Builtin{
 			return &object.Array{Elements: elements}
 		},
 	},
+
+	"quotes": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+			elements := []object.Object{}
+			for _, q := range env.Quotes() {
+				elements = append(elements, &object.String{Value: q.Inspect()})
+			}
+			return &object.Array{Elements: elements}
+		},
+	},
+
+	"counts": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+
+			pairs := make(map[object.HashKey]object.HashPair)
+
+			var meCount, wordsCount, trCount, refCount, quoteCount int
+
+			for _, v := range env.Store() {
+
+				switch v.(type) {
+				case *object.MeThought:
+					meCount++
+				case *object.Word:
+					wordsCount++
+				case *object.Translation:
+					trCount++
+				case *object.Reference:
+					refCount++
+				case *object.Quote:
+					quoteCount++
+				}
+
+			}
+
+			wordsCountObj := &object.String{Value: "words"}
+			hashed := wordsCountObj.HashKey()
+			pairs[hashed] = object.HashPair{Key: wordsCountObj, Value: &object.Integer{Value: int64(wordsCount)}}
+
+			refsCountObj := &object.String{Value: "refs"}
+			hashed = refsCountObj.HashKey()
+			pairs[hashed] = object.HashPair{Key: refsCountObj, Value: &object.Integer{Value: int64(refCount)}}
+
+			transCountObj := &object.String{Value: "trs"}
+			hashed = transCountObj.HashKey()
+			pairs[hashed] = object.HashPair{Key: refsCountObj, Value: &object.Integer{Value: int64(trCount)}}
+
+			thoughtsCountObj := &object.String{Value: "thoughts"}
+			hashed = thoughtsCountObj.HashKey()
+			pairs[hashed] = object.HashPair{Key: refsCountObj, Value: &object.Integer{Value: int64(meCount)}}
+
+			quotesCountObj := &object.String{Value: "quotes"}
+			hashed = quotesCountObj.HashKey()
+			pairs[hashed] = object.HashPair{Key: refsCountObj, Value: &object.Integer{Value: int64(quoteCount)}}
+
+			return &object.Hash{Pairs: pairs}
+		},
+	},
 }

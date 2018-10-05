@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"hash/fnv"
+	"strconv"
 	"strings"
 	"wordbuilder/ast"
 )
@@ -26,6 +27,7 @@ const (
 	ConceptObj     = "CPT"
 	TranslationObj = "TR"
 	MeThoughtObj   = "ME"
+	QuoteObj       = "QUOTE"
 )
 
 type Object interface {
@@ -189,6 +191,13 @@ func (s *String) HashKey() HashKey {
 	return HashKey{Type: s.Type(), Value: h.Sum64()}
 }
 
+func (w *Word) HashKey() HashKey {
+	h := fnv.New64a()
+	h.Write([]byte(w.Word))
+	i, _ := strconv.ParseUint(w.Definition, 10, 64)
+	return HashKey{Type: w.Type(), Value: i}
+}
+
 type HashPair struct {
 	Key   Object
 	Value Object
@@ -236,6 +245,19 @@ func (w *Word) Type() Type {
 
 func (w *Word) Inspect() string {
 	return fmt.Sprintf("%s->{%s}", w.Word, w.Definition)
+}
+
+type Quote struct {
+	By   string
+	Text string
+}
+
+func (q *Quote) Type() Type {
+	return WordObj
+}
+
+func (q *Quote) Inspect() string {
+	return fmt.Sprintf("\"%s\" - %s", q.Text, q.By)
 }
 
 type Reference struct {

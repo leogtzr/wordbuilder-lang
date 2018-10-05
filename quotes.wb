@@ -1,0 +1,6 @@
+quote: "Byung-Chul Han" {"Some text ... "};
+
+quotes();
+
+let byungquote = quotes()[0];
+byungquote;

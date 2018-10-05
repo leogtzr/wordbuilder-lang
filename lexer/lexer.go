@@ -142,9 +142,6 @@ whitespaces:
 			break whitespaces
 		}
 	}
-	// for l.ch == ' ' || l.ch == '\t' || l.ch == '\n' || l.ch == '\r' {
-	// 	l.readChar()
-	// }
 }
 
 func newToken(tokenType token.Type, ch byte) token.Token {

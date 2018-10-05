@@ -97,11 +97,24 @@ func New(l *lexer.Lexer) *Parser {
 	p.nextToken()
 
 	p.prefixParseFns = make(map[token.Type]prefixParseFn)
+
 	p.registerPrefix(token.Ident, p.parseIdentifier)
 	p.registerPrefix(token.Int, p.parseIntegerLiteral)
-
 	p.registerPrefix(token.Bang, p.parsePrefixExpression)
 	p.registerPrefix(token.Minus, p.parsePrefixExpression)
+	p.registerPrefix(token.True, p.parseBoolean)
+	p.registerPrefix(token.False, p.parseBoolean)
+	p.registerPrefix(token.LeftParen, p.parseGroupedExpressions)
+	p.registerPrefix(token.If, p.parseIfExpression)
+	p.registerPrefix(token.Function, p.parseFunctionLiteral)
+	p.registerPrefix(token.String, p.parseStringLiteral)
+	p.registerPrefix(token.Word, p.parseStringLiteral)
+	p.registerPrefix(token.Me, p.parseStringLiteral)
+	p.registerPrefix(token.Tr, p.parseStringLiteral)
+	p.registerPrefix(token.Ref, p.parseStringLiteral)
+	p.registerPrefix(token.LeftBracket, p.parseArrayLiteral)
+	p.registerPrefix(token.LeftBrace, p.parseHashLiteral)
+	p.registerPrefix(token.Colon, p.parseStringLiteral)
 
 	p.infixParseFns = make(map[token.Type]infixParseFn)
 	p.registerInfix(token.Plus, p.parseInfixExpression)
@@ -112,53 +125,8 @@ func New(l *lexer.Lexer) *Parser {
 	p.registerInfix(token.NotEq, p.parseInfixExpression)
 	p.registerInfix(token.Lt, p.parseInfixExpression)
 	p.registerInfix(token.Gt, p.parseInfixExpression)
-
-	p.registerPrefix(token.True, p.parseBoolean)
-	p.registerPrefix(token.False, p.parseBoolean)
-
-	p.registerPrefix(token.LeftParen, p.parseGroupedExpressions)
-	p.registerPrefix(token.If, p.parseIfExpression)
-
-	p.registerPrefix(token.Function, p.parseFunctionLiteral)
 	p.registerInfix(token.LeftParen, p.parseCallExpression)
-
-	p.registerPrefix(token.String, p.parseStringLiteral)
-	p.registerPrefix(token.Word, p.parseStringLiteral)
-	p.registerPrefix(token.Me, p.parseStringLiteral)
-	p.registerPrefix(token.Tr, p.parseStringLiteral)
-	p.registerPrefix(token.Ref, p.parseStringLiteral)
-
-	p.registerPrefix(token.LeftBracket, p.parseArrayLiteral)
 	p.registerInfix(token.LeftBracket, p.parseIndexExpression)
-
-	p.registerPrefix(token.LeftBrace, p.parseHashLiteral)
-	p.registerPrefix(token.Colon, p.parseStringLiteral)
-
-	// p.prefixParseFns = make(map[token.Type]prefixParseFn)
-	// p.registerPrefix(token.Ident, p.parseIdentifier)
-	// p.registerPrefix(token.Int, p.parseIntegerLiteral)
-	// p.registerPrefix(token.Bang, p.parsePrefixExpression)
-	// p.registerPrefix(token.Minus, p.parsePrefixExpression)
-	// p.registerPrefix(token.True, p.parseBoolean)
-	// p.registerPrefix(token.False, p.parseBoolean)
-	// p.registerPrefix(token.LeftParen, p.parseGroupedExpressions)
-	// p.registerPrefix(token.If, p.parseIfExpression)
-	// p.registerPrefix(token.Function, p.parseFunctionLiteral)
-	// p.registerPrefix(token.String, p.parseStringLiteral)
-	// p.registerPrefix(token.LeftBracket, p.parseArrayLiteral)
-	// p.registerPrefix(token.LeftBrace, p.parseHashLiteral)
-
-	// p.infixParseFns = make(map[token.Type]infixParseFn)
-	// p.registerInfix(token.Plus, p.parseInfixExpression)
-	// p.registerInfix(token.Minus, p.parseInfixExpression)
-	// p.registerInfix(token.Slash, p.parseInfixExpression)
-	// p.registerInfix(token.Asterisk, p.parseInfixExpression)
-	// p.registerInfix(token.Eq, p.parseInfixExpression)
-	// p.registerInfix(token.NotEq, p.parseInfixExpression)
-	// p.registerInfix(token.Lt, p.parseInfixExpression)
-	// p.registerInfix(token.Gt, p.parseInfixExpression)
-	// p.registerInfix(token.LeftParen, p.parseCallExpression)
-	// p.registerInfix(token.LeftBracket, p.parseIndexExpression)
 
 	return p
 }
@@ -428,7 +396,6 @@ func (p *Parser) Errors() []Error {
 }
 
 func (p *Parser) peekError(t token.Type) {
-	p.debug()
 	msg := fmt.Sprintf("expected next token to be [%s], got %s instead",
 		t, p.peekToken.Type)
 	p.errors = append(p.errors, Error{Error: msg, LineNumber: p.l.CurrentLine()})
@@ -472,6 +439,8 @@ func (p *Parser) parseStatement() ast.Statement {
 		return p.parseTranslationStatement()
 	case token.Me:
 		return p.parseMeThoughtStatement()
+	case token.Quote:
+		return p.parseQuoteStatement()
 	default:
 		return p.parseExpressionStatement()
 	}
@@ -586,6 +555,46 @@ func (p *Parser) parseTranslationStatement() *ast.TranslationStatement {
 			return nil
 		}
 		stmt.Defined = true
+	}
+
+	p.nextToken()
+
+	if p.peekTokenIs(token.Semicolon) {
+		p.nextToken()
+	}
+
+	return stmt
+}
+
+func (p *Parser) parseQuoteStatement() *ast.QuoteStatement {
+
+	stmt := &ast.QuoteStatement{}
+
+	if !p.expectPeek(token.Colon) {
+		return nil
+	}
+
+	// Expecting an identifier after the :
+	if !p.peekTokenIs(token.String) {
+		return nil
+	}
+
+	p.nextToken()
+
+	stmt.By = p.curToken.Literal
+
+	if p.peekTokenIs(token.LeftBrace) {
+		p.nextToken()
+
+		if !p.expectPeek(token.String) {
+			return nil
+		}
+
+		stmt.Text = p.parseExpression(LOWEST).String()
+
+		if !p.expectPeek(token.RightBrace) {
+			return nil
+		}
 	}
 
 	p.nextToken()

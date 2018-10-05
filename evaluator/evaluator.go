@@ -181,6 +181,17 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 
 		return obj
 
+	case *ast.QuoteStatement:
+		// val := Eval(node.Text, env)
+		// if isError(val) {
+		// 	return val
+		// }
+
+		obj := &object.Quote{By: node.By, Text: node.Text}
+		env.AddQuote(*obj)
+
+		return obj
+
 	case *ast.ConceptStatement:
 		val := Eval(node.Value, env)
 		if isError(val) {

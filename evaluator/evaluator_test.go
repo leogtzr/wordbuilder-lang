@@ -531,6 +531,28 @@ func TestWordAddition(t *testing.T) {
 	}
 }
 
+func TestQuoteAddition(t *testing.T) {
+	input := `quote: "Byung-Chul Han" {"Some text ... "};`
+	l := lexer.New(input)
+	p := parser.New(l)
+	program := p.ParseProgram()
+	env := object.NewEnvironment()
+	Eval(program, env)
+
+	if len(env.Quotes()) < 1 {
+		t.Fatal("quotes are empty ... ")
+	}
+
+	quote := env.Quotes()[0]
+	if quote.By != "Byung-Chul Han" {
+		t.Errorf("quote author wrong, got='%s', expected: '%s'", quote.By, "Byung-Chul Han")
+	}
+
+	if quote.Text != "Some text ... " {
+		t.Errorf("quote text wrong, got='%s', expected: '%s'", quote.Text, "Some text ... ")
+	}
+}
+
 func TestRefAddition(t *testing.T) {
 	input := `ref: "a" {"b"};
 	a;

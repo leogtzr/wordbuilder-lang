@@ -118,6 +118,26 @@ func (ts *TranslationStatement) String() string {
 	return out.String()
 }
 
+type QuoteStatement struct {
+	By   string
+	Text string
+}
+
+func (qs *QuoteStatement) statementNode()       {}
+func (qs *QuoteStatement) TokenLiteral() string { return qs.Text }
+func (qs *QuoteStatement) String() string {
+	var out bytes.Buffer
+
+	out.WriteString("\"")
+	out.WriteString(qs.Text)
+	out.WriteString("\" - ")
+	out.WriteString(qs.By)
+
+	out.WriteString(";")
+
+	return out.String()
+}
+
 // MeThoughtStatement ...
 type MeThoughtStatement struct {
 	Content string

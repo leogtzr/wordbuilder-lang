@@ -363,6 +363,10 @@ func TestBuiltinFunctions(t *testing.T) {
 		{`max(3, 5, 2)`, 5},
 		{`max(2)`, 2},
 		{`exists("alv")`, false},
+		{`
+		word: "cultual" {"Perteneciente o relativo al culto religioso."};
+		defined("cultual");
+		`, true},
 		{`len(1)`, "argument to `len` not supported, got INTEGER"},
 		{`len("one", "two")`, "wrong number of arguments. got=2, want=1"},
 	}
@@ -385,7 +389,6 @@ func TestBuiltinFunctions(t *testing.T) {
 			ok, _ := tt.expected.(bool)
 			fmt.Println(ok)
 			testBooleanObject(t, evaluated, ok)
-			// TODO: boolean ...
 		}
 	}
 }

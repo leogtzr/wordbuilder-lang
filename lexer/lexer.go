@@ -44,22 +44,8 @@ func (l *Lexer) NextToken() token.Token {
 		} else {
 			tok = newToken(token.Assign, l.ch)
 		}
-	case ';':
-		tok = newToken(token.Semicolon, l.ch)
-	case ':':
-		tok = newToken(token.Colon, l.ch)
-	case '(':
-		tok = newToken(token.LeftParen, l.ch)
-	case ')':
-		tok = newToken(token.RightParen, l.ch)
-	case ',':
-		tok = newToken(token.Comma, l.ch)
 	case '+':
 		tok = newToken(token.Plus, l.ch)
-	case '{':
-		tok = newToken(token.LeftBrace, l.ch)
-	case '}':
-		tok = newToken(token.RightBrace, l.ch)
 	case '-':
 		tok = newToken(token.Minus, l.ch)
 	case '!':
@@ -78,16 +64,27 @@ func (l *Lexer) NextToken() token.Token {
 		tok = newToken(token.Lt, l.ch)
 	case '>':
 		tok = newToken(token.Gt, l.ch)
-
+	case ';':
+		tok = newToken(token.Semicolon, l.ch)
+	case '(':
+		tok = newToken(token.LeftParen, l.ch)
+	case ')':
+		tok = newToken(token.RightParen, l.ch)
+	case ',':
+		tok = newToken(token.Comma, l.ch)
+	case '{':
+		tok = newToken(token.LeftBrace, l.ch)
+	case '}':
+		tok = newToken(token.RightBrace, l.ch)
+	case '[':
+		tok = newToken(token.LeftBracket, l.ch)
+	case ']':
+		tok = newToken(token.RightBracket, l.ch)
+	case ':':
+		tok = newToken(token.Colon, l.ch)
 	case '"':
 		tok.Type = token.String
 		tok.Literal = l.readString()
-
-	case '[':
-		tok = newToken(token.LeftBracket, l.ch)
-
-	case ']':
-		tok = newToken(token.RightBracket, l.ch)
 	case 0:
 		tok.Literal = ""
 		tok.Type = token.EOF
@@ -145,6 +142,9 @@ whitespaces:
 			break whitespaces
 		}
 	}
+	// for l.ch == ' ' || l.ch == '\t' || l.ch == '\n' || l.ch == '\r' {
+	// 	l.readChar()
+	// }
 }
 
 func newToken(tokenType token.Type, ch byte) token.Token {

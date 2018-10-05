@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -28,6 +29,8 @@ func main() {
 	defer programFile.Close()
 
 	programContent, _ := ioutil.ReadAll(programFile)
+
+	fmt.Println(string(programContent))
 
 	l := lexer.New(string(programContent))
 	p := parser.New(l)

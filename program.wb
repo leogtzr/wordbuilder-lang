@@ -51,9 +51,12 @@ puts(trcount());
 puts(max(1, 2) + 7);
 puts([3, 4][0]);
 
-me: {
-	"I think what the author tried to say is ..."
-};
-
 let x = thoughts()[0];
 puts(x);
+
+if (false == false) {
+	let hmm = "sdf";
+	if (false == false) {
+		puts("Ok!");
+	};
+};

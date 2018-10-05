@@ -31,13 +31,36 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 	case *ast.IntegerLiteral:
 		return &object.Integer{Value: node.Value}
 
+	case *ast.Boolean:
+		return nativeBoolToBooleanIObject(node.Value)
+
+	case *ast.PrefixExpression:
+		right := Eval(node.Right, env)
+		if isError(right) {
+			return right
+		}
+		return evalPrefixExpression(node.Operator, right)
+
+	case *ast.InfixExpression:
+		left := Eval(node.Left, env)
+		if isError(left) {
+			return left
+		}
+
+		right := Eval(node.Right, env)
+		if isError(right) {
+			return right
+		}
+
+		return evalInfixExpression(node.Operator, left, right)
+
 	case *ast.FunctionLiteral:
 		params := node.Parameters
 		body := node.Body
 		return &object.Function{Parameters: params, Body: body, Env: env}
 
-	case *ast.Boolean:
-		return nativeBoolToBooleanIObject(node.Value)
+	case *ast.BlockStatement:
+		return evalBlockStatement(node, env)
 
 	case *ast.StringLiteral:
 		return &object.String{Value: node.Value}
@@ -74,24 +97,6 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 		}
 		return applyFunction(env, function, args)
 
-	case *ast.PrefixExpression:
-		right := Eval(node.Right, env)
-		if isError(right) {
-			return right
-		}
-		return evalPrefixExpression(node.Operator, right)
-
-	case *ast.InfixExpression:
-		left := Eval(node.Left, env)
-		if isError(left) {
-			return left
-		}
-		right := Eval(node.Right, env)
-		if isError(right) {
-			return right
-		}
-		return evalInfixExpression(node.Operator, left, right)
-
 	case *ast.LetStatement:
 		val := Eval(node.Value, env)
 		if isError(val) {
@@ -109,9 +114,6 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 			return val
 		}
 		return &object.ReturnValue{Value: val}
-
-	case *ast.BlockStatement:
-		return evalBlockStatement(node, env)
 
 	case *ast.IfExpression:
 		return evalIfExpression(node, env)

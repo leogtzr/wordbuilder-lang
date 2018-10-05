@@ -61,6 +61,29 @@ var builtins = map[string]*object.Builtin{
 		},
 	},
 
+	"defined": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+
+			if len(args) != 1 || args[0].Type() != object.StringObj {
+				return newError("argument to `first` must be STRING, got %s", args[0].Type())
+			}
+
+			str := args[0].(*object.String)
+			obj, ok := env.Get(str.Value)
+
+			if ok {
+				word, ok := obj.(*object.Word)
+				if ok {
+					if word != nil {
+						return nativeBoolToBooleanIObject(word.Definition != "")
+					}
+				}
+			}
+
+			return FALSE
+		},
+	},
+
 	"first": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
 			if len(args) != 1 || args[0].Type() != object.ArrayObj {

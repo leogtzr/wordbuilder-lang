@@ -1,6 +1,8 @@
 package lexer
 
-import "wordbuilder/token"
+import (
+	"wordbuilder/token"
+)
 
 type Lexer struct {
 	input        string
@@ -150,15 +152,24 @@ func newToken(tokenType token.Type, ch byte) token.Token {
 
 func (l *Lexer) readIdentifier() string {
 	position := l.position
-	for isLetter(l.ch) {
+
+	if isLetter(l.ch) && !isDigit(l.ch) {
 		l.readChar()
+		for isLetter(l.ch) || isDigit(l.ch) {
+			l.readChar()
+		}
 	}
+
 	return l.input[position:l.position]
 }
 
 func isLetter(ch byte) bool {
-	return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_'
+	return ('a' <= ch && ch <= 'z') || ('A' <= ch && ch <= 'Z') || (ch == '_')
 }
+
+// func isDigit(ch byte) bool {
+// 	return '0' <= ch && ch <= '9'
+// }
 
 func (l *Lexer) peekChar() byte {
 	if l.readPosition >= len(l.input) {

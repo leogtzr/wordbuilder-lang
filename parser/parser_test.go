@@ -16,6 +16,7 @@ func TestLetStatements(t *testing.T) {
 	}{
 		{"let x = 5;", "x", 5},
 		{"let y = true;", "y", true},
+		{"let z123 = true;", "z123", true},
 		{"let foobar = y", "foobar", "y"},
 	}
 

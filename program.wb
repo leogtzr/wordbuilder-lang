@@ -54,6 +54,8 @@ puts([3, 4][0]);
 let x = thoughts()[0];
 puts(x);
 
+# Checking false expressions ... 
+
 if (false == false) {
 	let hmm = "sdf";
 	if (false == false) {

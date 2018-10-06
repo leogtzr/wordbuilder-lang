@@ -36,6 +36,7 @@ func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
 
 	l.skipWhitespace()
+	l.skipComments()
 
 	switch l.ch {
 	case '=':
@@ -143,6 +144,17 @@ whitespaces:
 		default:
 			break whitespaces
 		}
+	}
+}
+
+func (l *Lexer) skipComments() {
+	if l.ch == '#' {
+		l.readChar()
+		for l.ch != '\n' && l.ch != '\r' {
+			l.readChar()
+		}
+		l.readChar()
+		l.readChar()
 	}
 }
 

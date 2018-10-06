@@ -50,3 +50,9 @@ let x = thoughts()[0];
 puts(x);
 
 ```
+quote: "Byung-Chul Han" {"Some text ... "};
+
+quotes();
+
+let byungquote = quotes()[0];
+byungquote;

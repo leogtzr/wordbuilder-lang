@@ -93,7 +93,7 @@ func (ws *WordStatement) String() string {
 }
 
 type TranslationStatement struct {
-	Token      token.Token // the token.WORD token
+	Token      token.Token
 	Name       *Identifier
 	Value      Expression
 	Definition string

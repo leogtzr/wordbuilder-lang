@@ -2,11 +2,8 @@ package parser
 
 import (
 	"testing"
-	"wordbuilder/lexer"
-
-	//"wordbuilder/parser"
-	//"wordbuilder/parser"
 	"wordbuilder/ast"
+	"wordbuilder/lexer"
 	"wordbuilder/token"
 )
 

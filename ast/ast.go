@@ -71,7 +71,7 @@ type WordStatement struct {
 	Name       *Identifier
 	Value      Expression
 	Definition string
-	Defined    bool // If it is defined or not (p)
+	Defined    bool
 }
 
 func (ws *WordStatement) statementNode()       {}
@@ -97,7 +97,7 @@ type TranslationStatement struct {
 	Name       *Identifier
 	Value      Expression
 	Definition string
-	Defined    bool // If it is defined or not (p)
+	Defined    bool
 }
 
 func (ts *TranslationStatement) statementNode()       {}
@@ -159,7 +159,7 @@ type ReferenceStatement struct {
 	Name       *Identifier
 	Value      Expression
 	Definition string
-	Defined    bool // If it is defined or not (p)
+	Defined    bool
 }
 
 func (rs *ReferenceStatement) statementNode()       {}
@@ -185,7 +185,7 @@ type ConceptStatement struct {
 	Name       *Identifier
 	Value      Expression
 	Definition string
-	Defined    bool // If it is defined or not (p)
+	Defined    bool
 }
 
 func (cpts *ConceptStatement) statementNode()       {}
@@ -463,7 +463,7 @@ func (ie *IndexExpression) String() string {
 }
 
 type HashLiteral struct {
-	token.Token // the '{'
+	token.Token // the '{' token
 	Pairs       map[Expression]Expression
 }
 

@@ -291,14 +291,6 @@ func applyFunction(env *object.Environment, fn object.Object, args []object.Obje
 	default:
 		return newError("not a function: %s", fn.Type())
 	}
-
-	// function, ok := fn.(*object.Function)
-	// if !ok {
-	// 	return newError("not a function: %s", fn.Type())
-	// }
-	// extendedEnv := extendFunctionEnv(function, args)
-	// evaluated := Eval(function.Body, extendedEnv)
-	// return unwrapReturnValue(evaluated)
 }
 
 func extendFunctionEnv(fn *object.Function, args []object.Object) *object.Environment {
@@ -421,7 +413,6 @@ func evalIntegerInfixExpression(operator string, left, right object.Object) obje
 	case "!=":
 		return nativeBoolToBooleanIObject(leftVal != rightVal)
 	default:
-		//return NULL
 		return newError("unknown operator: %s %s %s", left.Type(), operator, right.Type())
 	}
 
@@ -434,7 +425,6 @@ func evalPrefixExpression(operator string, right object.Object) object.Object {
 	case "-":
 		return evalMinusPrefixOperatorExpression(right)
 	default:
-		//return NULL
 		return newError("unknown operator: %s%s", operator, right.Type())
 	}
 }
@@ -473,9 +463,6 @@ func evalProgram(program *ast.Program, env *object.Environment) object.Object {
 
 	for _, statement := range program.Statements {
 		result = Eval(statement, env)
-		// if returnValue, ok := result.(*object.ReturnValue); ok {
-		// 	return returnValue.Value
-		// }
 		switch result := result.(type) {
 		case *object.ReturnValue:
 			return result.Value
@@ -497,10 +484,6 @@ func evalBlockStatement(block *ast.BlockStatement, env *object.Environment) obje
 				return result
 			}
 		}
-
-		// if result != nil && result.Type() == object.RETURN_VALUE_OBJ {
-		// 	return result
-		// }
 	}
 
 	return result

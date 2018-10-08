@@ -4,6 +4,7 @@ import (
 	"wordbuilder/token"
 )
 
+// Lexer ...
 type Lexer struct {
 	input        string
 	position     int  // current position in input (points to current char)
@@ -22,19 +23,21 @@ func (l *Lexer) readChar() {
 	l.readPosition++
 }
 
+// New ...
 func New(input string) *Lexer {
 	l := &Lexer{input: input, lineNumber: 1}
 	l.readChar()
 	return l
 }
 
+// CurrentLine ...
 func (l *Lexer) CurrentLine() int {
 	return l.lineNumber
 }
 
+// NextToken ...
 func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
-
 	l.skipWhitespace()
 	l.skipComments()
 

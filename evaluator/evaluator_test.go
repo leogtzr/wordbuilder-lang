@@ -723,3 +723,27 @@ func TestHashIndexExpressions(t *testing.T) {
 	}
 
 }
+
+func TestGrepBuiltinFunction(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected interface{}
+	}{
+		{`
+		word: "abc";
+		word: "abcd";
+		word: "abcde";
+		let c = len(grep("ab"));
+		c;
+		`, 3},
+	}
+
+	for _, tt := range tests {
+		evaluated := testEval(tt.input)
+		switch expected := tt.expected.(type) {
+		case int:
+			testIntegerObject(t, evaluated, int64(expected))
+		}
+	}
+
+}

@@ -2,10 +2,35 @@ package evaluator
 
 import (
 	"fmt"
+	"strings"
 	"wordbuilder/object"
 )
 
 var builtins = map[string]*object.Builtin{
+
+	"grep": &object.Builtin{
+		Fn: func(env *object.Environment, args ...object.Object) object.Object {
+			if len(args) != 1 {
+				return newError("wrong number of arguments. got=%d, want=1", len(args))
+			}
+
+			if len(args) != 1 || args[0].Type() != object.StringObj {
+				return newError("argument to `grep` must be STRING, got %s", args[0].Type())
+			}
+
+			newElements := make([]object.Object, 0)
+
+			s, _ := args[0].(*object.String)
+			for k := range env.Store() {
+				if strings.Contains(k, s.Inspect()) {
+					newElements = append(newElements, &object.String{Value: k})
+				}
+			}
+
+			return &object.Array{Elements: newElements}
+		},
+	},
+
 	"len": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
 			if len(args) != 1 {
@@ -67,7 +92,7 @@ var builtins = map[string]*object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
 
 			if len(args) != 1 || args[0].Type() != object.StringObj {
-				return newError("argument to `first` must be STRING, got %s", args[0].Type())
+				return newError("argument to `defined` must be STRING, got %s", args[0].Type())
 			}
 
 			str := args[0].(*object.String)
@@ -136,6 +161,7 @@ var builtins = map[string]*object.Builtin{
 			return NULL
 		},
 	},
+
 	"push": &object.Builtin{
 		Fn: func(env *object.Environment, args ...object.Object) object.Object {
 			if len(args) != 2 && args[0].Type() != object.ArrayObj {
